@@ -85,7 +85,7 @@ function ArrowDownIcon(props) {
 function Article({ article }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
+      <Card.Title href={`/blog/${article.slug}`}>
         {article.title}
       </Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
@@ -231,7 +231,7 @@ function Projects() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-8 w-full">
+      <Button href="/projects" variant="secondary" className="group mt-8 w-full">
         See More
       </Button>
     </div>
@@ -265,18 +265,6 @@ function Photos() {
   )
 }
 
-function DividerProjects(title) {
-  return (
-    <div className="relative my-6">
-      <div className="absolute inset-0 flex items-center" aria-hidden="true">
-        <div className="w-full border-t border-gray-300" />
-      </div>
-      <div className="relative flex justify-start">
-        <span className="bg-white pr-3 text-base font-semibold leading-6 text-gray-900">Projects</span>
-      </div>
-    </div>
-  )
-}
 
 function Divider(props) {
   return (
@@ -299,22 +287,20 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Tinkerer, Creator, Software Engineer
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Hi I’m Tom, a software engineer based in Sydney. I specialise in cloud native software development with some recent projects
+            constructed using .NET, Terraform and React. In my spare time I also enjoy designing and building things - check out my projects page for what I've been working on.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/tombrereton"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/tbrereton/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -325,22 +311,22 @@ export default async function Home() {
       <Container className="mt-16 md:mt-28">
         <div className="grid grid-cols-1 max-w-xl gap-y-20 lg:max-w-none md:grid-cols-2">
           <div className="lg:pr-16 xl:pr-24">
-            <Divider title="Projects"/>
+            <Divider title="Projects" />
             <Projects />
             {/* <Newsletter /> */}
             {/* <Resume /> */}
           </div>
           <div>
-            <Divider title="Blog"/>
+            <Divider title="Blog" />
             <div className="flex flex-col gap-16">
               {articles.map((article) => (
                 <Article key={article.slug} article={article} />
               ))}
               {/* <Blog /> */}
             </div>
-              <Button href="#" variant="secondary" className="group w-full mt-8">
-                See More Posts
-              </Button>
+            <Button href="/blog" variant="secondary" className="group w-full mt-8">
+              See More Posts
+            </Button>
 
           </div>
         </div>
