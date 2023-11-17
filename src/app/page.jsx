@@ -71,18 +71,18 @@ function ProjectSummary({ summary }) {
 function Projects() {
   let projects = [
     {
-      title: 'Planetaria',
-      description: 'CEO',
+      title: 'SoundSort',
+      description: 'The place to build your perfect Spotify playlist.',
       logo: logoPlanetaria,
     },
     {
-      title: 'Airbnb',
-      description: 'Product Designer',
+      title: 'Gem Island',
+      description: 'A match three game like Candy Crush.',
       logo: logoAirbnb,
     },
     {
-      title: 'Facebook',
-      description: 'iOS Software Engineer',
+      title: 'Amelia Ames Landscape Architecture',
+      description: 'A marketing website for a landscape architect.',
       logo: logoFacebook,
     },
   ]
