@@ -7,7 +7,7 @@ export const metadata = {
   title: {
     template: '%s - Tom Brereton',
     default:
-      'Tom Brereton - Tinkerer, Creator, Software Engineer',
+      'Tom Brereton - Designer, Creator, Software Engineer',
   },
   description:
     'Hi I’m Tom, a software engineer based in Sydney. I specialise in cloud native software development with some recent projects constructed using .NET, Terraform and React.',
