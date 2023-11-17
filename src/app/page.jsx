@@ -2,20 +2,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -23,6 +16,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import {getProjects} from "@/lib/projects";
 
 function Article({ article }) {
   return (
@@ -55,9 +49,9 @@ function ProjectSummary({ summary }) {
         <Image src={summary.logo} alt="" className="h-7 w-7" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
-        <dt className="sr-only">Title</dt>
+        <dt className="sr-only">Name</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          {summary.title}
+          {summary.name}
         </dd>
         <dt className="sr-only">Description</dt>
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -69,28 +63,11 @@ function ProjectSummary({ summary }) {
 }
 
 function Projects() {
-  let projects = [
-    {
-      title: 'SoundSort',
-      description: 'The place to build your perfect Spotify playlist.',
-      logo: logoPlanetaria,
-    },
-    {
-      title: 'Gem Island',
-      description: 'A match three game like Candy Crush.',
-      logo: logoAirbnb,
-    },
-    {
-      title: 'Amelia Ames Landscape Architecture',
-      description: 'A marketing website for a landscape architect.',
-      logo: logoFacebook,
-    },
-  ]
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <ol className=" space-y-8">
-        {projects.map((project, roleIndex) => (
+        {getProjects().map((project, roleIndex) => (
           <ProjectSummary key={roleIndex} summary={project} />
         ))}
       </ol>
@@ -171,13 +148,11 @@ export default async function Home() {
         </div>
       </Container>
       {/* <Photos /> */}
-      <Container className="mt-16 md:mt-28">
-        <div className="grid grid-cols-1 max-w-xl gap-y-20 lg:max-w-none lg:grid-cols-2">
+      <Container className="mt-8 md:mt-28">
+        <div className="grid grid-cols-1  gap-y-10 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-16 xl:pr-24">
             <Divider title="Projects" />
             <Projects />
-            {/* <Newsletter /> */}
-            {/* <Resume /> */}
           </div>
           <div>
             <Divider title="Blog" />
@@ -185,9 +160,8 @@ export default async function Home() {
               {articles.map((article) => (
                 <Article key={article.slug} article={article} />
               ))}
-              {/* <Blog /> */}
             </div>
-            <Button href="/blog" variant="secondary" className="group w-full mt-8">
+            <Button href="/blog" variant="secondary" className="group w-full mt-16">
               See More Posts
             </Button>
 
