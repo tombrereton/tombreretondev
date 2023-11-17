@@ -16,7 +16,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
-import {getProjects} from "@/lib/projects";
+import { getProjects } from "@/lib/projects";
 
 function Article({ article }) {
   return (
@@ -67,7 +67,7 @@ function Projects() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <ol className=" space-y-8">
-        {getProjects().map((project, roleIndex) => (
+        {getProjects().slice(0, 3).map((project, roleIndex) => (
           <ProjectSummary key={roleIndex} summary={project} />
         ))}
       </ol>
@@ -127,7 +127,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Designer, Creator,<br/>Software Engineer
+            Designer, Creator,<br />Software Engineer
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Hi I’m Tom, a software engineer based in Sydney. I specialise in cloud native software development with some recent projects
