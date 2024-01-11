@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/avatar.jpg'
+import portraitImage from '@/images/portrait.jpeg'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
