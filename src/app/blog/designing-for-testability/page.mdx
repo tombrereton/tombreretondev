@@ -1,0 +1,55 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Tom Brereton',
+  date: '2023-11-23',
+  title: 'Designing for Testability: Balancing TDD and Practical Testing Strategies',
+  description:
+    'Unlock the secrets of effective software design with the Principles of Designing for Testability. Learn essential strategies to balance practical testing with TDD, ensuring robust and maintainable code.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+
+# Designing for Testability: Balancing TDD and Practical Testing Strategies
+
+## Key Strategies
+- [Do not be dogmatic with TDD](#do-not-be-dogmatic-with-tdd)
+- [Do not underestimate the power of a single (Unit, Integration, E2E) Test](#do-not-underestimate-the-power-of-a-single-unit-integration-e2e-test)
+- [When writing a function and you only do TDD once, do it first](#when-writing-a-function-and-you-only-do-tdd-once-do-it-first)
+- [Start with an exploratory test if you don't know how to write any of the code yet](#start-with-an-exploratory-test-if-you-dont-know-how-to-write-any-of-the-code-yet)
+- [Dependency free Domain logic only requires unit tests](#dependency-free-domain-logic-only-requires-unit-tests)
+- [For bugs, End to End tests tell you if the application does not work](#for-bugs-end-to-end-tests-tell-you-if-the-application-does-not-work)
+- [For bugs, Unit tests tell you where it does not work](#for-bugs-unit-tests-tell-you-where-it-does-not-work)
+- [Test behavior not implementation so you can refactor later](#test-behavior-not-implementation-so-you-can-refactor-later)
+
+### Do not be dogmatic with TDD
+While TDD is a powerful practice, being too rigid can hinder rather than help. It’s essential to use TDD as a guide, not a strict rulebook, adapting its principles to fit the project's needs.
+
+### Do not underestimate the power of a single (Unit, Integration, E2E) Test
+Even a single test, be it Unit, Integration, or End-to-End (E2E), can provide significant insights and prevent future issues. If you encounter a bug, you already have a test framework in place which you can extend quickly. In addition, your code is already written to be testable making your new test much easier to write.
+
+### When writing a function and you only do TDD once, do it first
+If you choose to apply TDD for a particular function, it's most beneficial to do it at the outset. This initial focus on testing can clarify your development goals and lead to cleaner, more focused code.
+
+### Start with an exploratory test if you don't know how to write any of the code yet
+When you're unsure how to begin coding, start with an exploratory test. This approach helps in understanding the problem better and paves the way for more structured tests and code.
+
+### Dependency free Domain logic only requires unit tests
+Domain logic that is free from external dependencies typically only needs unit testing. This ensures that the core logic is sound without the complexity of integrating other systems or units.
+
+### For bugs, End to End tests tell you if the application does not work
+End-to-End tests are crucial for identifying whether the application as a whole is functioning correctly. They are especially useful in spotting bugs that only emerge when all components work together.
+
+### For bugs, Unit tests tell you where it does not work
+Unit tests are invaluable for pinpointing the exact location of a bug in your code. They break down the problem into manageable parts, making it easier to identify and fix issues.
+
+### Test behavior not implementation so you can refactor later
+Focus on testing the behavior of your code, not its implementation. This approach allows for greater flexibility in refactoring since the tests are aligned with what the code is supposed to do, rather than how it does it.
+
+By embracing these principles, developers can create software that is not only functionally robust but also easier to test and maintain. Remember, the goal is to use testing to enhance the development process, not to constrain it.
