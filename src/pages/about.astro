@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import BaseHead from "../components/BaseHead.astro";
+import BlogPostHeader from "../components/BlogPostHeader.astro";
+import Footer from "../components/Footer.astro";
+import Prose from "../components/Prose.astro";
+const title = "About Me";
+const description = "A little bit about Tom";
+import portrait from "../assets/images/portrait.webp";
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body class="dark:bg-grey-600 dark:text-grey-200">
+		<Header />
+		<main transition:animate="slide" class="mx-auto max-w-2xl">
+			<article>
+				<div
+					class="md:my-8 rounded border-b-2 md:border-2 border-black dark:border-grey-400 flex justify-center"
+				>
+					<Image
+						src={portrait}
+						class="object-contain"
+						alt="hero image"
+					/>
+				</div>
+				<div class="">
+					<div class="px-4 my-8">
+						<h1 class="text-5xl">{title}</h1>
+					</div>
+					<div class="px-4">
+						<Prose>
+							<p>
+								I'm driven by a passion to build things; and I
+								channel that into building websites and
+								software. I find elegance in simplicity but
+								always start with a pragmatic approach.
+							</p>
+							<p>
+								I prefer the tools that come with type safe
+								languages such as C# and Go, yet I still
+								apreaciate dynamic languages like Javascript and
+								Python.
+							</p>
+							<p>
+								When not coding, I enjoy honing my Muay Thai
+								skills, gaming and staying fit at the gym.
+							</p>
+						</Prose>
+					</div>
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
