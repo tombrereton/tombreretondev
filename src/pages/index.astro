@@ -1,0 +1,43 @@
+---
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PrimaryButton from "../components/buttons/PrimaryButton.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-yellow dark:bg-grey-600 dark:text-grey-200">
+		<Header />
+		<main transition:animate="slide" class="flex flex-col items-center p-2">
+			<h2 class="text-5xl max-w-80 lg:max-w-lg text-center mt-12">
+				Building software one
+				<span class="font-pixel font-bold">bit</span> at a time
+			</h2>
+			<div class="container max-w-72 lg:max-w-2xl min-h-80">
+				<LottieAnimation
+					src="animations/working.json"
+					autoplay="visible"
+				/>
+			</div>
+			<div class="flex flex-col gap-4">
+				<PrimaryButton href="/about" text="About" />
+				<PrimaryButton href="/projects" text="Projects" />
+				<PrimaryButton href="/blog" text="Blog" />
+				<PrimaryButton href="/contact" text="Contact" />
+			</div>
+		</main>
+		<Footer />
+		<script>
+			document.addEventListener("astro:after-swap", () => {
+				window.loadLottie("animations/working.json");
+			});
+			window.loadLottie("animations/working.json");
+		</script>
+	</body>
+</html>
