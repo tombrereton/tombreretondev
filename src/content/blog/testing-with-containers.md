@@ -1,5 +1,5 @@
 ---
-title: 'Write Robust Tests with Testcontainers'
+title: 'Write Robust Integration Tests with Testcontainers'
 description: ''
 pubDate: '2023-07-14'
 heroImage: '/images/testing-with-containers.webp'
