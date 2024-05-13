@@ -30,44 +30,24 @@ import SecondaryButton from "../components/buttons/SecondaryButton.astro";
 					/>
 				</div>
 				<div class="">
-					<div class="px-4 my-8">
-						<h1 class="text-5xl">{title}</h1>
-					</div>
-					<div class="px-4">
+					<a href="/contact" class="no-underline">
+						<h2
+							class="px-4 my-8 md:px-0 text-5xl font-bold hover:underline underline-offset-8"
+						>
+							Hire me
+						</h2>
+					</a>
+					<div class="px-4 md:px-0">
 						<Prose>
-							<p>
-								Hello! I'm Tom, a seasoned software engineer
-								dedicated to building software that works the
-								way you want it to. I value a pragmatic approach
-								to completing projects while also bringing best
-								practices and a creative mindset. As a senior or
-								lead engineer with almost 10 years in the
-								technology sector; I specialize in
-								<span class="font-display-medium font-bold"
-									>.NET</span
-								>,
-								<span class="font-display-medium font-bold"
-									>Golang</span
-								>, and
-
-								<span class="font-display-medium font-bold"
-									>Microsoft Azure</span
-								>.
-							</p>
-							<a href="/contact" class="no-underline">
-								<h2
-									class="font-display-medium uppercase text-4xl"
-								>
-									Hire me
-								</h2>
-							</a>
-							<p>
+							<p class="leading-8">
 								Are you lacking resources to finish a project?
 								Maybe you need technical advice?
-
-								<span class="font-display-medium font-bold"
-									>I can help</span
-								>.
+								<span class="text-nowrap">
+									<SecondaryButton
+										href="/contact"
+										text="I can help"
+									/>
+								</span>.
 							</p>
 							<ul>
 								<li>
@@ -95,7 +75,7 @@ import SecondaryButton from "../components/buttons/SecondaryButton.astro";
 									Astro, or HTMX
 								</li>
 							</ul>
-							<p>
+							<p class="leading-8">
 								I'm open to
 								<span class="font-display-medium font-bold"
 									>contracting roles</span
@@ -110,6 +90,32 @@ import SecondaryButton from "../components/buttons/SecondaryButton.astro";
 									href="/contact"
 									text="Say Hello"
 								/> .
+							</p>
+						</Prose>
+					</div>
+					<div class="px-4 md:px-0 my-8">
+						<h1 class="text-5xl">{title}</h1>
+					</div>
+					<div class="px-4 md:px-0">
+						<Prose>
+							<p>
+								Hello! I'm Tom, a seasoned software engineer
+								dedicated to building software that works the
+								way you want it to. I value a pragmatic approach
+								to completing projects while also bringing best
+								practices and a creative mindset. As a senior or
+								lead engineer with almost 10 years in the
+								technology sector; I specialize in
+								<span class="font-display-medium font-bold"
+									>.NET</span
+								>,
+								<span class="font-display-medium font-bold"
+									>Golang</span
+								>, and
+
+								<span class="font-display-medium font-bold"
+									>Microsoft Azure</span
+								>.
 							</p>
 						</Prose>
 					</div>
