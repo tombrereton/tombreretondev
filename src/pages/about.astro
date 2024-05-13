@@ -1,4 +1,5 @@
 ---
+import PrimaryButtonSmall from "../components/buttons/PrimaryButtonSmall.astro";
 import { Image } from "astro:assets";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
@@ -7,6 +8,7 @@ const title = "About Me";
 const description = "A little bit about Tom";
 import portrait from "../assets/images/portrait.webp";
 import Header from "../components/Header.astro";
+import SecondaryButton from "../components/buttons/SecondaryButton.astro";
 ---
 
 <html lang="en">
@@ -52,7 +54,13 @@ import Header from "../components/Header.astro";
 									>Microsoft Azure</span
 								>.
 							</p>
-							<h2>Let's Build Something Together</h2>
+							<a href="/contact" class="no-underline">
+								<h2
+									class="font-display-medium uppercase text-4xl"
+								>
+									Hire me
+								</h2>
+							</a>
 							<p>
 								Are you lacking resources to finish a project?
 								Maybe you need technical advice?
@@ -92,7 +100,12 @@ import Header from "../components/Header.astro";
 								<span class="font-display-medium font-bold"
 									>freelancing gigs</span
 								>
-								for small businesses.
+								for small businesses. If this sounds like you, please
+
+								<SecondaryButton
+									href="/contact"
+									text="Say Hello"
+								/>.
 							</p>
 						</Prose>
 					</div>
