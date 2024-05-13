@@ -6,12 +6,9 @@ import tailwind from "@astrojs/tailwind";
 import lottie from "astro-integration-lottie";
 import alpinejs from "@astrojs/alpinejs";
 
-import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.tombrereton.dev',
   integrations: [mdx(), sitemap(), react(), tailwind(), lottie(), alpinejs()],
-  output: "server",
-  adapter: vercel()
 });
