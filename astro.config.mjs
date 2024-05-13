@@ -4,11 +4,14 @@ import sitemap from '@astrojs/sitemap';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import lottie from "astro-integration-lottie";
-
 import alpinejs from "@astrojs/alpinejs";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
-  integrations: [mdx(), sitemap(), react(), tailwind(), lottie(), alpinejs()]
+  site: 'https://www.tombrereton.dev',
+  integrations: [mdx(), sitemap(), react(), tailwind(), lottie(), alpinejs()],
+  output: "server",
+  adapter: vercel()
 });
