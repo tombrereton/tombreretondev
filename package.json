@@ -26,7 +26,6 @@
     "alpinejs": "^3.13.10",
     "animejs": "^3.2.2",
     "astro": "^4.7.1",
-    "astro-analytics": "^2.7.0",
     "astro-integration-lottie": "^0.2.3",
     "hamburger-react": "^2.5.0",
     "lottie-web": "^5.12.2",

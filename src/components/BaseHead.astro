@@ -1,7 +1,6 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import { Umami } from "astro-analytics";
 import { ViewTransitions } from "astro:transitions";
 import "@fontsource-variable/dm-sans";
 import "@fontsource/staatliches";
@@ -29,11 +28,6 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
-<Umami
-	dataId="c82be1cf-e9ff-43ee-98aa-71ff089f4e0d"
-	site="https://www.tombrereton.dev"
-	host="/umami.js"
-/>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
