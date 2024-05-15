@@ -4,8 +4,7 @@ import { Image } from "astro:assets";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Prose from "../components/Prose.astro";
-const title = "About Me";
-const description = "A little bit about Tom";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import portrait from "../assets/images/portrait.webp";
 import Header from "../components/Header.astro";
 import SecondaryButton from "../components/buttons/SecondaryButton.astro";
@@ -13,7 +12,7 @@ import SecondaryButton from "../components/buttons/SecondaryButton.astro";
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 
 	<body class="dark:bg-grey-600 dark:text-grey-200">
