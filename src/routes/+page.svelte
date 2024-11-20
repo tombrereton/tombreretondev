@@ -1,12 +1,16 @@
+<script lang="ts">
+	import portrait from '$lib/assets/portrait.png';
+</script>
+
 <div class="gap-15 flex flex-col items-center gap-12 p-6">
 	<div id="hero" class="flex flex-col items-center justify-center rounded bg-teal shadow">
 		<h1
-			class="font-Gilroy-Black mt-6 text-center text-[5.55rem]
+			class="font-Gilroy-Black mt-6 text-center text-[5.5rem]
 			text-base font-black leading-none tracking-tighter"
 		>
 			Tom Brereton
 		</h1>
-		<enhanced:img src="$lib/assets/portrait.png" alt="Tom Brereton" class="z-10 -mt-10 w-64" />
+		<img src={portrait} alt="Tom Brereton" class="z-10 -mt-10 w-64" />
 	</div>
 	<div id="landing-text" class="mx-1 text-2xl text-teal">
 		<p>
