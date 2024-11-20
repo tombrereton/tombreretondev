@@ -6,7 +6,7 @@
 	<div id="hero" class="flex flex-col items-center justify-center rounded bg-teal shadow">
 		<h1
 			class="text-dark mt-6 text-center font-Gilroy-Black
-			text-[5.5rem] font-black leading-none tracking-tighter"
+			text-7xl font-black leading-none tracking-tighter"
 		>
 			Tom Brereton
 		</h1>
