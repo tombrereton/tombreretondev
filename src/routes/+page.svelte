@@ -14,8 +14,8 @@
 	</div>
 	<div id="landing-text" class="mx-1 text-2xl text-teal">
 		<p>
-			Hi I’m Tom, from little old place called <span class="font-Gilroy-Bold">Australia</span>. I’m
-			a <span class="font-Gilroy-Bold">Software Engineer</span>,
+			Hi I’m Tom, from a little place called <span class="font-Gilroy-Bold">Australia</span>. I’m a
+			<span class="font-Gilroy-Bold">Software Engineer</span>,
 			<span class="font-Gilroy-Bold">Team Lead</span> and
 			<span class="font-Gilroy-Bold">Cloud Architect</span>. In these roles my main tools are
 			<span class="font-Gilroy-Bold">C# & .NET</span>,
