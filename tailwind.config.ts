@@ -8,7 +8,22 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				'Gilroy-Black': ['Gilroy-Black', 'sans-serif']
+			},
+			fontSize: {
+				'7.5xl': ['5rem', { lineHeight: '1' }]
+			},
+			colors: {
+				base: '#303446',
+				text: '#c6d0f5',
+				teal: '#81c8be'
+			},
+			boxShadow: {
+				DEFAULT: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)'
+			}
+		}
 	},
 
 	plugins: [typography, forms, containerQueries, aspectRatio]
