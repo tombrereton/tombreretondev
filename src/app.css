@@ -6,3 +6,23 @@
 	font-family: 'Gilroy-Black';
 	src: url('./lib/fonts/Gilroy-Black.ttf');
 }
+
+@font-face {
+	font-family: 'Gilroy-Bold';
+	src: url('./lib/fonts/Gilroy-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Gilroy-SemiBold';
+	src: url('./lib/fonts/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'Gilroy-Regular';
+	src: url('./lib/fonts/Gilroy-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Gilroy-Light';
+	src: url('./lib/fonts/Gilroy-Light.ttf');
+}

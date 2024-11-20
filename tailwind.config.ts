@@ -10,7 +10,11 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				'Gilroy-Black': ['Gilroy-Black', 'sans-serif']
+				'Gilroy-Black': ['Gilroy-Black', 'sans-serif'],
+				'Gilroy-Bold': ['Gilroy-Bold', 'sans-serif'],
+				'Gilroy-SemiBold': ['Gilroy-SemiBold', 'sans-serif'],
+				'Gilroy-Regular': ['Gilroy-Regular', 'sans-serif'],
+				'Gilroy-Light': ['Gilroy-Light', 'sans-serif']
 			},
 			fontSize: {
 				'7.5xl': ['5rem', { lineHeight: '1' }]
@@ -18,10 +22,12 @@ export default {
 			colors: {
 				base: '#303446',
 				text: '#c6d0f5',
-				teal: '#81c8be'
+				teal: '#81c8be',
+				rosewater: '#f2d5cf'
 			},
 			boxShadow: {
-				DEFAULT: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)'
+				DEFAULT: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)',
+				rosewater: '0px 0px 20px 0px rgba(242, 213, 207, 0.1)'
 			}
 		}
 	},
