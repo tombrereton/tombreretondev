@@ -26,7 +26,7 @@
 	</div>
 	<div id="landing-nav" class="flex w-full flex-col gap-10">
 		<a
-			class="text-dark rounded-3xl bg-rosewater pb-1 pt-3 text-center font-Gilroy-Bold text-5xl shadow-rosewater"
+			class="text-dark bg-flamingo shadow-flamingo rounded-3xl pb-1 pt-3 text-center font-Gilroy-Bold text-5xl"
 			href="/contact">Hire Me</a
 		>
 		<a

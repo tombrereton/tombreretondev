@@ -23,11 +23,13 @@ export default {
 				dark: '#303446',
 				text: '#c6d0f5',
 				teal: '#81c8be',
+				flamingo: '#EEBEBE',
 				rosewater: '#f2d5cf'
 			},
 			boxShadow: {
 				DEFAULT: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)',
-				rosewater: '0px 0px 20px 0px rgba(242, 213, 207, 0.1)'
+				rosewater: '0px 0px 20px 0px rgba(242, 213, 207, 0.1)',
+				flamingo: '0px 0px 20px 0px rgba(238, 190, 190, 0.1)'
 			}
 		}
 	},
