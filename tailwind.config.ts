@@ -20,7 +20,7 @@ export default {
 				'7.5xl': ['5rem', { lineHeight: '1' }]
 			},
 			colors: {
-				base: '#303446',
+				dark: '#303446',
 				text: '#c6d0f5',
 				teal: '#81c8be',
 				rosewater: '#f2d5cf'

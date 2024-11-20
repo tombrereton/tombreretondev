@@ -5,8 +5,8 @@
 <div class="gap-15 flex flex-col items-center gap-12 p-6">
 	<div id="hero" class="flex flex-col items-center justify-center rounded bg-teal shadow">
 		<h1
-			class="font-Gilroy-Black mt-6 text-center text-[5.5rem]
-			text-base font-black leading-none tracking-tighter"
+			class="text-dark mt-6 text-center font-Gilroy-Black
+			text-[5.5rem] font-black leading-none tracking-tighter"
 		>
 			Tom Brereton
 		</h1>
@@ -24,17 +24,17 @@
 			you need help in these areas, reach out below.
 		</p>
 	</div>
-	<div id="landing-nav" class="flex w-full flex-col gap-12">
+	<div id="landing-nav" class="flex w-full flex-col gap-10">
 		<a
-			class="bg-rosewater font-Gilroy-Bold shadow-rosewater rounded-3xl pb-1 pt-3 text-center text-5xl text-base"
+			class="text-dark rounded-3xl bg-rosewater pb-1 pt-3 text-center font-Gilroy-Bold text-5xl shadow-rosewater"
 			href="/contact">Hire Me</a
 		>
 		<a
-			class="font-Gilroy-SemiBold rounded-3xl pb-2 pt-3 text-center text-3xl text-teal outline outline-2"
+			class="rounded-3xl pb-2 pt-3 text-center font-Gilroy-SemiBold text-3xl text-teal outline outline-2"
 			href="/projects">See my projects</a
 		>
 		<a
-			class="font-Gilroy-SemiBold rounded-3xl pb-2 pt-3 text-center text-3xl text-teal outline outline-2"
+			class="rounded-3xl pb-2 pt-3 text-center font-Gilroy-SemiBold text-3xl text-teal outline outline-2"
 			href="/blog">My Blog</a
 		>
 	</div>
