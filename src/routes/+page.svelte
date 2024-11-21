@@ -4,10 +4,10 @@
 
 <div class="gap-15 relative flex flex-col items-center gap-12 p-6">
 	<div
-		class="animate-blob absolute -left-4 top-0 -z-10 h-72 w-72 rounded-full bg-purple-300 blur-3xl filter"
+		class="animate-blob absolute -left-4 top-20 -z-10 h-72 w-72 rounded-full bg-purple-300 blur-3xl filter"
 	></div>
 	<div
-		class="animate-blob absolute -right-4 top-0 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
+		class="animate-blob absolute -right-5 top-12 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
 	></div>
 	<div
 		class="animate-blob absolute top-24 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
