@@ -37,7 +37,9 @@ export default {
 				text: '#c6d0f5',
 				teal: '#81c8be',
 				flamingo: '#EEBEBE',
-				rosewater: '#f2d5cf'
+				rosewater: '#f2d5cf',
+				maroon: '#ea999c',
+				peach: '#ef9f76'
 			},
 			boxShadow: {
 				DEFAULT: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)',

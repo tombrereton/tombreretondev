@@ -4,15 +4,15 @@
 
 <div class="gap-15 relative flex flex-col items-center gap-12 p-6">
 	<div
-		class="animate-blob absolute -left-4 top-20 -z-10 h-72 w-72 rounded-full bg-purple-300 blur-3xl filter"
+		class="animate-blob bg-maroon absolute -left-4 top-20 -z-10 h-72 w-72 rounded-full blur-3xl filter"
 	></div>
 	<div
-		class="animate-blob absolute -right-5 top-12 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
+		class="animate-blob bg-maroon absolute -right-5 top-12 -z-10 h-72 w-72 rounded-full blur-3xl filter"
 	></div>
 	<div
-		class="animate-blob absolute top-24 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
+		class="animate-blob bg-maroon absolute top-16 -z-10 h-72 w-72 rounded-full blur-3xl filter"
 	></div>
-	<div id="hero" class="flex flex-col items-center justify-center rounded bg-teal shadow">
+	<div id="hero" class="flex flex-col items-center justify-center rounded bg-teal px-2 shadow">
 		<h1
 			class="mt-6 text-center font-Gilroy-Black
 			text-7xl font-black leading-none tracking-tighter text-dark"
