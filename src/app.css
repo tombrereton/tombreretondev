@@ -26,3 +26,17 @@
 	font-family: 'Gilroy-Light';
 	src: url('./lib/fonts/Gilroy-Light.ttf');
 }
+
+@layer components {
+	.backlight:after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		position: absolute;
+		background: inherit;
+		filter: blur(8px);
+		z-index: -1;
+		animation: blob 3s infinite ease-in-out;
+	}
+}
