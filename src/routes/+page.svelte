@@ -5,7 +5,7 @@
 <div
 	class="gap-15 flex flex-col items-center gap-12 overflow-clip p-6 lg:h-screen lg:justify-center lg:gap-32"
 >
-	<div class="gap-15 flex flex-col items-center gap-12 overflow-clip lg:max-w-5xl lg:flex-row">
+	<div class="gap-15 flex flex-col items-center gap-12 lg:max-w-5xl lg:flex-row">
 		<div
 			id="hero"
 			class="backlight relative flex flex-col items-center justify-center rounded bg-teal px-2 lg:px-6"
@@ -37,15 +37,15 @@
 		class="lg flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-center"
 	>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl text-dark shadow-flamingo"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl text-dark shadow-flamingo lg:order-2"
 			href="/contact">Let's chat!</a
 		>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 lg:order-1"
 			href="/projects">See my projects</a
 		>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 lg:order-3"
 			href="/blog">My blog</a
 		>
 	</div>
