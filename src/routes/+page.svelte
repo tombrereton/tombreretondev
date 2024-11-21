@@ -37,15 +37,15 @@
 		class="lg flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-center"
 	>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl text-dark shadow-flamingo lg:order-2"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl text-dark shadow-flamingo transition hover:scale-105 lg:order-2"
 			href="/contact">Let's chat!</a
 		>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 lg:order-1"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 transition hover:scale-105 lg:order-1"
 			href="/projects">See my projects</a
 		>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 lg:order-3"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 transition hover:scale-105 lg:order-3"
 			href="/blog">My blog</a
 		>
 	</div>
