@@ -20,15 +20,16 @@
 		</div>
 		<div id="landing-text" class="mx-1 max-w-lg text-2xl text-teal lg:text-3xl">
 			<p>
-				Hi! I’m Tom from <span class="font-Gilroy-Bold">Australia</span>. I’m a
-				<span class="font-Gilroy-Bold">Software Engineer</span>,
-				<span class="font-Gilroy-Bold">Team Lead</span> and
-				<span class="font-Gilroy-Bold">Cloud Architect</span>. In these roles my main tools are
-				<span class="font-Gilroy-Bold">C# & .NET</span>,
-				<span class="font-Gilroy-Bold">Microsoft Azure</span> and
-				<span class="font-Gilroy-Bold">Terraform</span> but I also enjoy Typescript, React & Svelte.
-				If you need help in these areas,
-				<span class="font-Gilroy-Bold">reach out below</span>.
+				Hi! I’m Tom from <span class="font-Gilroy-Bold hover:animate-pulse">Australia</span>. I’m a
+				<span class="font-Gilroy-Bold hover:animate-pulse">Software Engineer</span>,
+				<span class="font-Gilroy-Bold hover:animate-pulse">Team Lead</span> and
+				<span class="font-Gilroy-Bold hover:animate-pulse">Cloud Architect</span>. In these roles my
+				main tools are
+				<span class="font-Gilroy-Bold hover:animate-pulse">C# & .NET</span>,
+				<span class="font-Gilroy-Bold hover:animate-pulse">Microsoft Azure</span> and
+				<span class="font-Gilroy-Bold hover:animate-pulse">Terraform</span> but I also enjoy
+				Typescript, React & Svelte. If you need help in these areas,
+				<span class="font-Gilroy-Bold hover:animate-pulse">reach out below</span>.
 			</p>
 		</div>
 	</div>
