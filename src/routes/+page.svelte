@@ -2,7 +2,7 @@
 	import portrait from '$lib/assets/portrait.png';
 </script>
 
-<div class="gap-15 relative flex flex-col items-center gap-12 p-6">
+<div class="gap-15 relative flex flex-col items-center gap-12 overflow-clip p-6">
 	<div
 		class="animate-blob bg-maroon absolute -left-4 top-20 -z-10 h-72 w-72 rounded-full blur-3xl filter"
 	></div>
