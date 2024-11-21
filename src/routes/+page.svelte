@@ -30,8 +30,8 @@
 			<span class="font-Gilroy-Bold">Cloud Architect</span>. In these roles my main tools are
 			<span class="font-Gilroy-Bold">C# & .NET</span>,
 			<span class="font-Gilroy-Bold">Microsoft Azure</span> and
-			<span class="font-Gilroy-Bold">Terraform</span> but I also enjoy Typescript, React & Svelte. If
-			you need help in these areas or want to work with me, reach out below.
+			<span class="font-Gilroy-Bold">Terraform</span> but I also enjoy Typescript, React & Svelte.
+			If you need help in these areas, <span class="font-Gilroy-Bold">reach out below</span>.
 		</p>
 	</div>
 	<div id="landing-nav" class="flex w-full flex-col gap-10">
