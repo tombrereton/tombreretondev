@@ -2,11 +2,20 @@
 	import portrait from '$lib/assets/portrait.png';
 </script>
 
-<div class="gap-15 flex flex-col items-center gap-12 p-6">
+<div class="gap-15 relative flex flex-col items-center gap-12 p-6">
+	<div
+		class="animate-blob absolute -left-4 top-0 -z-10 h-72 w-72 rounded-full bg-purple-300 blur-3xl filter"
+	></div>
+	<div
+		class="animate-blob absolute -right-4 top-0 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
+	></div>
+	<div
+		class="animate-blob absolute top-24 -z-10 h-72 w-72 rounded-full bg-pink-300 blur-3xl filter"
+	></div>
 	<div id="hero" class="flex flex-col items-center justify-center rounded bg-teal shadow">
 		<h1
-			class="text-dark mt-6 text-center font-Gilroy-Black
-			text-7xl font-black leading-none tracking-tighter"
+			class="mt-6 text-center font-Gilroy-Black
+			text-7xl font-black leading-none tracking-tighter text-dark"
 		>
 			Tom Brereton
 		</h1>
@@ -14,19 +23,19 @@
 	</div>
 	<div id="landing-text" class="mx-1 text-2xl text-teal">
 		<p>
-			Hi I’m Tom, from a little place called <span class="font-Gilroy-Bold">Australia</span>. I’m a
+			Hi! I’m Tom from <span class="font-Gilroy-Bold">Australia</span>. I’m a
 			<span class="font-Gilroy-Bold">Software Engineer</span>,
 			<span class="font-Gilroy-Bold">Team Lead</span> and
 			<span class="font-Gilroy-Bold">Cloud Architect</span>. In these roles my main tools are
 			<span class="font-Gilroy-Bold">C# & .NET</span>,
 			<span class="font-Gilroy-Bold">Microsoft Azure</span> and
 			<span class="font-Gilroy-Bold">Terraform</span> but I also enjoy Typescript, React & Svelte. If
-			you need help in these areas, reach out below.
+			you need help in these areas or want to work with me, reach out below.
 		</p>
 	</div>
 	<div id="landing-nav" class="flex w-full flex-col gap-10">
 		<a
-			class="text-dark bg-flamingo shadow-flamingo rounded-3xl pb-1 pt-3 text-center font-Gilroy-Bold text-5xl"
+			class="rounded-3xl bg-flamingo pb-1 pt-3 text-center font-Gilroy-Bold text-5xl text-dark shadow-flamingo"
 			href="/contact">Hire Me</a
 		>
 		<a

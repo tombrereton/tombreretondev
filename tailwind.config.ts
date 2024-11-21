@@ -9,6 +9,19 @@ export default {
 
 	theme: {
 		extend: {
+			animation: {
+				blob: 'blob 8s infinite'
+			},
+			keyframes: {
+				blob: {
+					'0%': { tranform: 'translate(0px, 0px) scale(1.0)' },
+					'20%': { transform: 'translate(15px, 3px) scale(1)' },
+					'40%': { transform: 'translate(30px, 5px) scale(1)' },
+					'60%': { transform: 'translate(0px, 0px) scale(1)' },
+					'80%': { transform: 'translate(-20px, -20px) scale(0.9)' },
+					'100%': { transform: 'translate(0px, 0px) scale(1)' }
+				}
+			},
 			fontFamily: {
 				'Gilroy-Black': ['Gilroy-Black', 'sans-serif'],
 				'Gilroy-Bold': ['Gilroy-Bold', 'sans-serif'],
