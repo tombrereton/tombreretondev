@@ -39,4 +39,16 @@
 		z-index: -1;
 		animation: blob 3s infinite ease-in-out;
 	}
+
+	@keyframes blob {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(0.95);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
 }

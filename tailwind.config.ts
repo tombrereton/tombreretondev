@@ -9,16 +9,13 @@ export default {
 
 	theme: {
 		extend: {
-			animation: {
-				blob: 'blob 8s infinite'
-			},
-			keyframes: {
-				blob: {
-					'0%': { tranform: 'scale(1)' },
-					'50%': { transform: 'scale(.95)' },
-					'100%': { transform: 'scale(1)' }
-				}
-			},
+			// keyframes: {
+			// 	blob: {
+			// 		'0%': { tranform: 'scale(1)' },
+			// 		'50%': { transform: 'scale(.50)' },
+			// 		'100%': { transform: 'scale(1)' }
+			// 	}
+			// },
 			fontFamily: {
 				'Gilroy-Black': ['Gilroy-Black', 'sans-serif'],
 				'Gilroy-Bold': ['Gilroy-Bold', 'sans-serif'],
@@ -30,7 +27,7 @@ export default {
 				'7.5xl': ['5rem', { lineHeight: '1' }]
 			},
 			colors: {
-				dark: '#303446',
+				grey: '#303446',
 				text: '#c6d0f5',
 				teal: '#81c8be',
 				flamingo: '#EEBEBE',

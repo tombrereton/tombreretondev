@@ -11,14 +11,14 @@
 			class="backlight relative flex flex-col items-center justify-center rounded bg-teal px-2 lg:px-6"
 		>
 			<h1
-				class="mt-6 text-center font-Gilroy-Black
-			text-7xl font-black leading-none tracking-tighter text-dark lg:text-9xl"
+				class="text-grey mt-6 text-center
+			font-Gilroy-Black text-7xl font-black leading-none tracking-tighter lg:text-9xl"
 			>
 				Tom Brereton
 			</h1>
 			<img src={portrait} alt="Tom Brereton" class="z-10 -mt-10 w-64 lg:-mt-16" />
 		</div>
-		<div id="landing-text" class="mx-1 max-w-lg text-2xl text-teal lg:text-3xl">
+		<div id="landing-text" class="mx-1 flex max-w-lg flex-col gap-6 text-2xl text-teal lg:text-3xl">
 			<p>
 				Hi! I’m Tom from <span class="font-Gilroy-Bold hover:animate-pulse">Australia</span>. I’m a
 				<span class="font-Gilroy-Bold hover:animate-pulse">Software Engineer</span>,
@@ -27,9 +27,15 @@
 				main tools are
 				<span class="font-Gilroy-Bold hover:animate-pulse">C# & .NET</span>,
 				<span class="font-Gilroy-Bold hover:animate-pulse">Microsoft Azure</span> and
-				<span class="font-Gilroy-Bold hover:animate-pulse">Terraform</span> but I also enjoy
-				Typescript, React & Svelte. If you need help in these areas,
-				<span class="font-Gilroy-Bold hover:animate-pulse">reach out below</span>.
+				<span class="font-Gilroy-Bold hover:animate-pulse">Terraform</span> but I also enjoy Typescript,
+				React & Svelte.
+			</p>
+			<p>
+				Every business is unique, and your <span class="font-Gilroy-Bold hover:animate-pulse"
+					>website</span
+				>
+				and <span class="font-Gilroy-Bold hover:animate-pulse">cloud services</span> should be too. Let's
+				chat and figure out what you need together.
 			</p>
 		</div>
 	</div>
@@ -38,7 +44,7 @@
 		class="lg flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-center"
 	>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl text-dark shadow-flamingo transition hover:scale-105 lg:order-2"
+			class="text-grey flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl shadow-flamingo transition hover:scale-105 lg:order-2"
 			href="/contact">Let's chat!</a
 		>
 		<a
