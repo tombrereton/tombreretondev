@@ -36,9 +36,11 @@ export default {
 				peach: '#ef9f76'
 			},
 			boxShadow: {
-				DEFAULT: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)',
-				rosewater: '0px 0px 20px 0px rgba(242, 213, 207, 0.1)',
-				flamingo: '0px 0px 20px 0px rgba(238, 190, 190, 0.1)'
+				DEFAULT: '0px 0px 20px 0px rgba(129, 200, 190, 0.3)',
+				big: '0px 0px 40px 0px rgba(129, 200, 190, 0.3)',
+				rosewater: '0px 0px 20px 0px rgba(242, 213, 207, 0.1)'
+				// flamingo: '0px 0px 20px 0px rgba(238, 190, 190, 0.1)',
+				// flamenco: '0px 0px 20px 0px rgba(238, 190, 190, 0.1)'
 			}
 		}
 	},

@@ -8,11 +8,11 @@
 	<div class="gap-15 flex flex-col items-center gap-12 lg:max-w-5xl lg:flex-row">
 		<div
 			id="hero"
-			class="backlight relative flex flex-col items-center justify-center rounded bg-teal px-2 lg:px-6"
+			class="backlight relative flex flex-col items-center justify-center rounded-2xl bg-teal px-2 lg:px-6"
 		>
 			<h1
-				class="text-grey mt-6 text-center
-			font-Gilroy-Black text-7xl font-black leading-none tracking-tighter lg:text-9xl"
+				class="mt-6 text-center font-Gilroy-Black
+			text-7xl font-black leading-none tracking-tighter text-grey lg:text-9xl"
 			>
 				Tom Brereton
 			</h1>
@@ -23,12 +23,11 @@
 				Hi! I’m Tom from <span class="font-Gilroy-Bold hover:animate-pulse">Australia</span>. I’m a
 				<span class="font-Gilroy-Bold hover:animate-pulse">Software Engineer</span>,
 				<span class="font-Gilroy-Bold hover:animate-pulse">Team Lead</span> and
-				<span class="font-Gilroy-Bold hover:animate-pulse">Cloud Architect</span>. In these roles my
-				main tools are
+				<span class="font-Gilroy-Bold hover:animate-pulse">Cloud Architect</span>. My main tools are
 				<span class="font-Gilroy-Bold hover:animate-pulse">C# & .NET</span>,
 				<span class="font-Gilroy-Bold hover:animate-pulse">Microsoft Azure</span> and
-				<span class="font-Gilroy-Bold hover:animate-pulse">Terraform</span> but I also enjoy Typescript,
-				React & Svelte.
+				<span class="font-Gilroy-Bold hover:animate-pulse">Terraform</span>, but I also enjoy
+				Typescript, React & Svelte.
 			</p>
 			<p>
 				Every business is unique, and your <span class="font-Gilroy-Bold hover:animate-pulse"
@@ -44,15 +43,15 @@
 		class="lg flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-center"
 	>
 		<a
-			class="text-grey flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-5xl shadow-flamingo transition hover:scale-105 lg:order-2"
+			class="hover:shadow-big flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-3xl text-grey shadow shadow-flamingo transition hover:shadow-flamingo lg:order-2"
 			href="/contact">Let's chat!</a
 		>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 transition hover:scale-105 lg:order-1"
+			class="hover:backlight flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-3xl text-teal outline outline-2 transition hover:shadow hover:shadow-teal lg:order-1"
 			href="/projects">See my projects</a
 		>
 		<a
-			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-4xl text-teal outline outline-2 transition hover:scale-105 lg:order-3"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl pt-1 text-center font-Gilroy-Regular text-3xl text-teal outline outline-2 transition hover:shadow hover:shadow-teal lg:order-3"
 			href="/blog">My blog</a
 		>
 	</div>
