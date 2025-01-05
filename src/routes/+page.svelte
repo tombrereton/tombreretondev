@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="gap-15 flex flex-col items-center gap-12 overflow-clip p-6 lg:h-screen lg:justify-center lg:gap-32"
+	class="gap-15 flex grow flex-col items-center gap-12 overflow-clip p-6 lg:h-full lg:justify-center lg:gap-32"
 >
 	<div class="gap-15 flex flex-col items-center gap-12 lg:max-w-5xl lg:flex-row">
 		<div
@@ -20,30 +20,30 @@
 		</div>
 		<div id="landing-text" class="mx-1 flex max-w-lg flex-col gap-6 text-2xl text-teal lg:text-3xl">
 			<p>
-				Hi! I’m Tom from <span class="font-Gilroy-Bold hover:animate-pulse">Australia</span>. I’m a
-				<span class="font-Gilroy-Bold hover:animate-pulse">Software Engineer</span>,
-				<span class="font-Gilroy-Bold hover:animate-pulse">Team Lead</span> and
-				<span class="font-Gilroy-Bold hover:animate-pulse">Cloud Architect</span>. My main tools are
-				<span class="font-Gilroy-Bold hover:animate-pulse">C# & .NET</span>,
-				<span class="font-Gilroy-Bold hover:animate-pulse">Microsoft Azure</span> and
-				<span class="font-Gilroy-Bold hover:animate-pulse">Terraform</span>, but I also enjoy
+				Hi! I’m Tom from <span class="hover:animate-pulse font-Gilroy-Bold">Australia</span>. I’m a
+				<span class="hover:animate-pulse font-Gilroy-Bold">Software Engineer</span>,
+				<span class="hover:animate-pulse font-Gilroy-Bold">Team Lead</span> and
+				<span class="hover:animate-pulse font-Gilroy-Bold">Cloud Architect</span>. My main tools are
+				<span class="hover:animate-pulse font-Gilroy-Bold">C# & .NET</span>,
+				<span class="hover:animate-pulse font-Gilroy-Bold">Microsoft Azure</span> and
+				<span class="hover:animate-pulse font-Gilroy-Bold">Terraform</span>, but I also enjoy
 				Typescript, React & Svelte.
 			</p>
 			<p>
-				Every business is unique, and your <span class="font-Gilroy-Bold hover:animate-pulse"
+				Every business is unique, and your <span class="hover:animate-pulse font-Gilroy-Bold"
 					>website</span
 				>
-				and <span class="font-Gilroy-Bold hover:animate-pulse">cloud services</span> should be too. Let's
+				and <span class="hover:animate-pulse font-Gilroy-Bold">cloud services</span> should be too. Let's
 				chat and figure out what you need together.
 			</p>
 		</div>
 	</div>
 	<div
 		id="landing-nav"
-		class="lg flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-center"
+		class="lg flex w-full animate-fade-in-2 flex-col items-center gap-10 opacity-0 lg:flex-row lg:justify-center"
 	>
 		<a
-			class="hover:shadow-big flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-3xl text-grey shadow shadow-flamingo transition hover:shadow-flamingo lg:order-2"
+			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-3xl text-grey shadow shadow-flamingo transition hover:shadow-big hover:shadow-flamingo lg:order-2"
 			href="/contact">Let's chat!</a
 		>
 		<a
