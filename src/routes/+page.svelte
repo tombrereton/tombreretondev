@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="gap-15 flex grow flex-col items-center gap-12 px-6 lg:h-full lg:justify-center lg:gap-32"
+	class="gap-15 flex grow flex-col items-center gap-12 px-6 pb-8 lg:h-full lg:justify-center lg:gap-32 lg:pb-0"
 >
 	<div class="gap-15 flex flex-col items-center gap-12 lg:max-w-5xl lg:flex-row">
 		<div
