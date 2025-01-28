@@ -14,14 +14,12 @@
 
 <svelte:document onkeydown={handleKeydown} />
 
-<div
-	class="inline-flex h-10 items-center justify-center rounded-md border-text px-2 text-sm lg:hidden"
->
+<div class="inline-flex items-center justify-end px-4 lg:hidden">
 	<Hamburger bind:open={dialogOpen} --color="#c6d0f5" --layer-height="2px" />
 </div>
 <button
 	onclick={() => (dialogOpen = true)}
-	class="text-md hidden items-center justify-center rounded-md border border-subtext1 p-2 px-4 text-subtext1 lg:inline-flex"
+	class="text-md mt-6 hidden w-32 items-center justify-center rounded-md border border-subtext1 p-2 px-4 text-subtext1 lg:inline-flex"
 >
 	Menu ⌘K
 </button>

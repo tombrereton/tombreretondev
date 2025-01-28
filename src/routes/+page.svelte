@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="gap-15 flex grow flex-col items-center gap-12 overflow-clip p-6 lg:h-full lg:justify-center lg:gap-32"
+	class="gap-15 flex grow flex-col items-center gap-12 px-6 lg:h-full lg:justify-center lg:gap-32"
 >
 	<div class="gap-15 flex flex-col items-center gap-12 lg:max-w-5xl lg:flex-row">
 		<div
@@ -40,7 +40,7 @@
 	</div>
 	<div
 		id="landing-nav"
-		class="lg flex w-full animate-fade-in-2 flex-col items-center gap-10 opacity-0 lg:flex-row lg:justify-center"
+		class="lg flex w-full animate-fade-in-1 flex-col items-center gap-10 opacity-0 lg:flex-row lg:justify-center"
 	>
 		<a
 			class="flex h-16 w-80 items-center justify-center rounded-3xl bg-flamingo pt-1 text-center font-Gilroy-Bold text-3xl text-grey shadow shadow-flamingo transition hover:shadow-big hover:shadow-flamingo lg:order-2"

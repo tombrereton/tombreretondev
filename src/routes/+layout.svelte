@@ -4,7 +4,5 @@
 	let { children } = $props();
 </script>
 
-<div id="command-container" class="animate-fade-in-2 flex justify-center pt-6 opacity-0">
-	<Command />
-</div>
+<Command />
 {@render children()}
