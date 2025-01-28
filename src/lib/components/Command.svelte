@@ -14,18 +14,18 @@
 
 <svelte:document onkeydown={handleKeydown} />
 
-<div class="inline-flex h-10 items-center justify-center rounded-md border-text px-2 text-sm">
+<div
+	class="inline-flex h-10 items-center justify-center rounded-md border-text px-2 text-sm lg:hidden"
+>
 	<Hamburger bind:open={dialogOpen} --color="#c6d0f5" --layer-height="2px" />
-	⌘K
 </div>
+<button
+	onclick={() => (dialogOpen = true)}
+	class="text-md hidden items-center justify-center rounded-md border border-subtext1 p-2 px-4 text-subtext1 lg:inline-flex"
+>
+	Menu ⌘K
+</button>
 <Dialog.Root bind:open={dialogOpen}>
-	<!-- <Dialog.Trigger
-		class="inline-flex h-10 select-none
-	items-center justify-center whitespace-nowrap rounded-input px-[21px]
-	text-[15px] font-semibold outline outline-1 outline-text transition-colors"
-	>
-		Menu ⌘K
-	</Dialog.Trigger> -->
 	<Dialog.Portal>
 		<Dialog.Overlay
 			class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80"
