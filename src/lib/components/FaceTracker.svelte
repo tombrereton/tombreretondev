@@ -23,6 +23,12 @@
 	let statusMessage = $state('');
 	let imagesPreloaded = $state(false);
 	let preloadedImages: HTMLImageElement[] = [];
+	let idleTimer: number | null = null;
+	let isIdle = $state(false);
+	let idleAnimationFrame: number | null = null;
+	let idleStartTime: number | null = null;
+	let lastGazeX = 0;
+	let lastGazeY = 0;
 
 	function clamp(value: number, min: number, max: number): number {
 		return Math.max(min, Math.min(max, value));
@@ -56,6 +62,10 @@
 		const clampedX = clamp(nx, -1, 1);
 		const clampedY = clamp(ny, -1, 1);
 
+		// Store last gaze position for smooth idle transition
+		lastGazeX = clampedX;
+		lastGazeY = clampedY;
+
 		const px = quantizeToGrid(clampedX);
 		const py = quantizeToGrid(clampedY);
 
@@ -71,9 +81,65 @@
 	let lastMouseX = 0;
 	let lastMouseY = 0;
 
+	function resetIdleTimer() {
+		// Stop idle animation
+		isIdle = false;
+		idleStartTime = null;
+		if (idleAnimationFrame) {
+			cancelAnimationFrame(idleAnimationFrame);
+			idleAnimationFrame = null;
+		}
+
+		// Reset idle timer
+		if (idleTimer) clearTimeout(idleTimer);
+		idleTimer = setTimeout(() => {
+			isIdle = true;
+			idleStartTime = Date.now();
+			startIdleAnimation();
+		}, 3000); // Start idle after 3 seconds of no movement
+	}
+
+	function startIdleAnimation() {
+		if (!isIdle || !idleStartTime) return;
+
+		const elapsed = (Date.now() - idleStartTime) / 1000;
+		const TRANSITION_DURATION = 1; // 1 second to return to center
+
+		let wanderX = 0;
+		let wanderY = 0;
+
+		if (elapsed < TRANSITION_DURATION) {
+			// Smoothly interpolate from last position to center (ease out)
+			const progress = elapsed / TRANSITION_DURATION;
+			const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease out
+
+			// Interpolate between last gaze position and center (0, 0)
+			wanderX = lastGazeX * (1 - easeOut);
+			wanderY = lastGazeY * (1 - easeOut);
+		} else {
+			// After reaching center, start wandering
+			const time = elapsed - TRANSITION_DURATION;
+			wanderX = Math.sin(time * 0.5) * 0.3; // Gentle horizontal wander
+			wanderY = Math.sin(time * 0.7) * 0.2; // Gentle vertical wander
+		}
+
+		const px = quantizeToGrid(wanderX);
+		const py = quantizeToGrid(wanderY);
+
+		const filename = gridToFilename(px, py);
+		imageSrc = `${basePath}${filename}`;
+
+		if (isIdle) {
+			idleAnimationFrame = requestAnimationFrame(() => startIdleAnimation());
+		}
+	}
+
 	function handleMouseMove(e: MouseEvent) {
 		// Don't update from mouse if orientation is enabled
 		if (orientationEnabled) return;
+
+		// Reset idle timer on mouse movement
+		resetIdleTimer();
 
 		// Store latest mouse position
 		lastMouseX = e.clientX;
@@ -92,6 +158,10 @@
 	function handleTouchMove(e: TouchEvent) {
 		// Don't update from touch if orientation is enabled
 		if (orientationEnabled) return;
+
+		// Reset idle timer on touch
+		resetIdleTimer();
+
 		if (e.touches && e.touches.length > 0) {
 			const t = e.touches[0];
 			setFromClient(t.clientX, t.clientY);
@@ -100,6 +170,9 @@
 
 	function handleDeviceOrientation(e: DeviceOrientationEvent) {
 		if (!container) return;
+
+		// Reset idle timer on device movement
+		resetIdleTimer();
 
 		// beta: tilt front-to-back (-90 to 90)
 		// gamma: tilt left-to-right (-90 to 90)
@@ -200,10 +273,15 @@
 		const rect = container.getBoundingClientRect();
 		setFromClient(rect.left + rect.width / 2, rect.top + rect.height / 2);
 
+		// Start idle timer
+		resetIdleTimer();
+
 		return () => {
 			window.removeEventListener('mousemove', handleMouseMove);
 			window.removeEventListener('touchmove', handleTouchMove);
 			window.removeEventListener('deviceorientation', handleDeviceOrientation);
+			if (idleTimer) clearTimeout(idleTimer);
+			if (idleAnimationFrame) cancelAnimationFrame(idleAnimationFrame);
 		};
 	});
 </script>
