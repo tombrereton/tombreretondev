@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Toast from './Toast.svelte';
 
 	interface Props {
 		basePath?: string;
@@ -29,6 +30,7 @@
 	let idleStartTime: number | null = null;
 	let lastGazeX = 0;
 	let lastGazeY = 0;
+	let showToast = $state(false);
 
 	function clamp(value: number, min: number, max: number): number {
 		return Math.max(min, Math.min(max, value));
@@ -239,6 +241,11 @@
 				container.scrollIntoView({ behavior: 'smooth', block: 'center' });
 			}
 		}
+
+		// Show toast to instruct user to tilt phone
+		if (orientationEnabled) {
+			showToast = true;
+		}
 	}
 
 	function preloadImages() {
@@ -311,6 +318,8 @@
 	{/if}
 </div>
 
+<Toast bind:show={showToast} message="Tilt your phone and watch me follow! 👀" duration={4000} />
+
 <style>
 	.face-tracker {
 		position: relative;
@@ -345,7 +354,7 @@
 		bottom: 2rem;
 		right: 2rem;
 		padding: 1rem 1.5rem;
-		background: linear-gradient(45deg, #1a0033, #4a0080, #7b2cbf, #4a0080, #1a0033);
+		background: var(--gradient-purple-animated);
 		background-size: 300% 300%;
 		animation: gradient-shift 3s ease infinite;
 		color: white;
