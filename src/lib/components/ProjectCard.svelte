@@ -22,6 +22,10 @@
 	let imageLoading = $state(true);
 	let error = $state('');
 
+	// Cache for social images (shared across all component instances)
+	const IMAGE_CACHE_KEY = 'github_social_images';
+	const CACHE_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
+
 	async function fetchRepo() {
 		try {
 			const headers: HeadersInit = {
@@ -51,9 +55,42 @@
 		}
 	}
 
+	function getCachedImages(): Record<string, { url: string; timestamp: number }> {
+		try {
+			const cached = localStorage.getItem(IMAGE_CACHE_KEY);
+			if (cached) {
+				return JSON.parse(cached);
+			}
+		} catch (err) {
+			console.error('Failed to read image cache:', err);
+		}
+		return {};
+	}
+
+	function setCachedImage(repoKey: string, url: string) {
+		try {
+			const cache = getCachedImages();
+			cache[repoKey] = { url, timestamp: Date.now() };
+			localStorage.setItem(IMAGE_CACHE_KEY, JSON.stringify(cache));
+		} catch (err) {
+			console.error('Failed to save image cache:', err);
+		}
+	}
+
 	async function fetchSocialImage() {
 		try {
 			imageLoading = true;
+			const repoKey = `${owner}/${repo}`;
+
+			// Check cache first
+			const cache = getCachedImages();
+			const cached = cache[repoKey];
+			if (cached && Date.now() - cached.timestamp < CACHE_EXPIRY_MS) {
+				socialImageUrl = cached.url;
+				imageLoading = false;
+				return;
+			}
+
 			// Use a proxy service to fetch the GitHub page and extract og:image
 			// This avoids CORS issues
 			const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://github.com/${owner}/${repo}`)}`;
@@ -67,6 +104,9 @@
 				const url = new URL(match[1]);
 				url.searchParams.set('w', '300');
 				socialImageUrl = url.toString();
+
+				// Cache the result
+				setCachedImage(repoKey, socialImageUrl);
 			}
 			imageLoading = false;
 		} catch (err) {
