@@ -66,9 +66,18 @@
 		}
 	}
 
+	let lastUpdate = 0;
+	const UPDATE_INTERVAL = 50; // Update every 50ms (20 FPS)
+
 	function handleMouseMove(e: MouseEvent) {
 		// Don't update from mouse if orientation is enabled
 		if (orientationEnabled) return;
+
+		// Throttle updates for better performance
+		const now = Date.now();
+		if (now - lastUpdate < UPDATE_INTERVAL) return;
+		lastUpdate = now;
+
 		setFromClient(e.clientX, e.clientY);
 	}
 
