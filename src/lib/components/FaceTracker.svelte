@@ -21,7 +21,6 @@
 	let debugInfo = $state('');
 	let needsPermission = $state(false);
 	let orientationEnabled = $state(false);
-	let statusMessage = $state('');
 	let imagesPreloaded = $state(false);
 	let preloadedImages: HTMLImageElement[] = [];
 	let idleTimer: number | null = null;
@@ -199,33 +198,33 @@
 	}
 
 	async function requestOrientationPermission() {
-		statusMessage = 'Requesting permission...';
+		if (debug) console.log('Requesting permission...');
 		// For iOS 13+ devices, we need to request permission
 		if (
 			typeof DeviceOrientationEvent !== 'undefined' &&
 			typeof (DeviceOrientationEvent as any).requestPermission === 'function'
 		) {
 			try {
-				statusMessage = 'iOS detected...';
+				if (debug) console.log('iOS detected...');
 				const permission = await (DeviceOrientationEvent as any).requestPermission();
-				statusMessage = `Permission: ${permission}`;
+				if (debug) console.log(`Permission: ${permission}`);
 				if (permission === 'granted') {
 					window.addEventListener('deviceorientation', handleDeviceOrientation);
 					orientationEnabled = true;
 					needsPermission = false;
-					statusMessage = '';
 				} else {
-					statusMessage = 'Permission denied';
+					if (debug) console.log('Permission denied');
 				}
 			} catch (error) {
-				statusMessage = `Error: ${error}`;
+				if (debug) console.error(`Error: ${error}`);
 			}
 		} else {
-			// For non-iOS devices or older iOS versions
-			statusMessage = 'Non-iOS, enabling...';
+			// For non-iOS devices or older iOS versions (Android auto-grants)
+			if (debug) console.log('Non-iOS, enabling...');
 			window.addEventListener('deviceorientation', handleDeviceOrientation);
 			orientationEnabled = true;
-			statusMessage = '';
+			// Show toast for Android auto-granted permission
+			showToast = true;
 		}
 	}
 
@@ -309,9 +308,6 @@
 	{/if}
 	{#if needsPermission && !orientationEnabled}
 		<button class="permission-button" onclick={enableOrientation}> Bring Me to Life </button>
-	{/if}
-	{#if statusMessage}
-		<div class="status-message">{statusMessage}</div>
 	{/if}
 	{#if debug}
 		<div class="face-debug">{@html debugInfo}</div>
@@ -397,19 +393,5 @@
 			padding: 1rem 1.75rem;
 			font-size: 0.9375rem;
 		}
-	}
-
-	.status-message {
-		position: absolute;
-		top: 1rem;
-		left: 50%;
-		transform: translateX(-50%);
-		padding: 0.5rem 1rem;
-		background: rgba(0, 0, 0, 0.8);
-		color: white;
-		border-radius: 4px;
-		font-size: 0.75rem;
-		z-index: 10;
-		white-space: nowrap;
 	}
 </style>
