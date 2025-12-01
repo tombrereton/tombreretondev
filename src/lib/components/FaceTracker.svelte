@@ -21,6 +21,7 @@
 	let needsPermission = $state(false);
 	let orientationEnabled = $state(false);
 	let statusMessage = $state('');
+	let imagesPreloaded = $state(false);
 
 	function clamp(value: number, min: number, max: number): number {
 		return Math.max(min, Math.min(max, value));
@@ -140,7 +141,24 @@
 		await requestOrientationPermission();
 	}
 
+	function preloadImages() {
+		// Generate all possible image URLs and preload them
+		const images: HTMLImageElement[] = [];
+		for (let px = P_MIN; px <= P_MAX; px += STEP) {
+			for (let py = P_MIN; py <= P_MAX; py += STEP) {
+				const filename = gridToFilename(px, py);
+				const img = new Image();
+				img.src = `${basePath}${filename}`;
+				images.push(img);
+			}
+		}
+		imagesPreloaded = true;
+	}
+
 	onMount(() => {
+		// Preload all images immediately
+		preloadImages();
+
 		// Track pointer anywhere on the page
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('touchmove', handleTouchMove, { passive: true });
