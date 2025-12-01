@@ -107,8 +107,8 @@
 		const gamma = e.gamma || 0; // horizontal tilt
 
 		// Map tilt angles to normalized coordinates [-1, 1]
-		// Center around 35° for typical phone viewing angle
-		const adjustedBeta = beta - 35; // Offset so 35° is center
+		// Center around 45° for typical phone viewing angle when sitting
+		const adjustedBeta = beta - 45; // Offset so 45° is center
 		const nx = clamp(gamma / 15, -1, 1); // -15 to 15 degrees maps to -1 to 1
 		const ny = clamp(-adjustedBeta / 15, -1, 1); // Invert Y-axis and use smaller range
 
@@ -257,7 +257,9 @@
 		bottom: 2rem;
 		right: 2rem;
 		padding: 1rem 1.5rem;
-		background: #10b981;
+		background: linear-gradient(45deg, #1a0033, #4a0080, #7b2cbf, #4a0080, #1a0033);
+		background-size: 300% 300%;
+		animation: gradient-shift 3s ease infinite;
 		color: white;
 		border: none;
 		border-radius: 50px;
@@ -265,14 +267,25 @@
 		font-weight: 600;
 		cursor: pointer;
 		z-index: 1000;
-		box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+		box-shadow: 0 4px 12px rgba(123, 44, 191, 0.4);
 		transition: all 0.3s ease;
 	}
 
+	@keyframes gradient-shift {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
 	.permission-button:hover {
-		background: #059669;
 		transform: translateY(-2px);
-		box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+		box-shadow: 0 6px 16px rgba(123, 44, 191, 0.6);
 	}
 
 	.permission-button:active {
