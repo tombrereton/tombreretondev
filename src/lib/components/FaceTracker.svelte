@@ -358,14 +358,14 @@
 		background-size: 300% 300%;
 		animation: gradient-shift 3s ease infinite;
 		color: white;
-		border: none;
+		border: 1px solid rgba(199, 125, 255, 0.3);
 		border-radius: 50px;
 		font-family: 'Outfit', sans-serif;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
 		z-index: 1000;
-		box-shadow: 0 4px 12px rgba(123, 44, 191, 0.4);
+		box-shadow: var(--button-glow);
 		transition: all 0.3s ease;
 	}
 
@@ -383,7 +383,7 @@
 
 	.permission-button:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 6px 16px rgba(123, 44, 191, 0.6);
+		box-shadow: var(--button-glow-hover);
 	}
 
 	.permission-button:active {

@@ -16,7 +16,9 @@
 	--color-purple-bright: #7b2cbf;
 	--color-purple-light: #9d4edd;
 	--gradient-purple: linear-gradient(135deg, #9d4edd 0%, #7b2cbf 100%);
-	--gradient-purple-animated: linear-gradient(45deg, #1a0033, #4a0080, #7b2cbf, #4a0080, #1a0033);
+	--gradient-purple-animated: linear-gradient(45deg, #0a001a, #6b1cb0, #b44eff, #6b1cb0, #0a001a);
+	--button-glow: 0 4px 12px rgba(123, 44, 191, 0.4);
+	--button-glow-hover: 0 6px 16px rgba(123, 44, 191, 0.6);
 
 	/* Striped background */
 	--stripe-color-1: #f8f9fa;
@@ -37,6 +39,11 @@
 
 		--stripe-color-1: #0d1117;
 		--stripe-color-2: #161b22;
+
+		/* Boost gradient and glow for dark mode */
+		--gradient-purple-animated: linear-gradient(45deg, #0a001a, #7b2cbf, #c77dff, #7b2cbf, #0a001a);
+		--button-glow: 0 6px 20px rgba(180, 78, 255, 0.5);
+		--button-glow-hover: 0 8px 28px rgba(180, 78, 255, 0.7);
 	}
 }
 
@@ -53,6 +60,11 @@
 
 	--stripe-color-1: #0d1117;
 	--stripe-color-2: #161b22;
+
+	/* Boost gradient and glow for dark mode */
+	--gradient-purple-animated: linear-gradient(45deg, #0a001a, #7b2cbf, #c77dff, #7b2cbf, #0a001a);
+	--button-glow: 0 6px 20px rgba(180, 78, 255, 0.5);
+	--button-glow-hover: 0 8px 28px rgba(180, 78, 255, 0.7);
 }
 
 [data-theme='light'] {

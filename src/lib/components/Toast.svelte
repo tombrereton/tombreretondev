@@ -70,8 +70,9 @@
 			gradient-shift 3s ease infinite;
 		color: white;
 		padding: 20px 64px 20px 32px;
+		border: 1px solid rgba(199, 125, 255, 0.3);
 		border-radius: 16px;
-		box-shadow: 0 8px 24px rgba(157, 78, 221, 0.4);
+		box-shadow: var(--button-glow);
 		z-index: 1000;
 		max-width: 500px;
 		min-width: 320px;
