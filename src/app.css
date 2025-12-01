@@ -16,7 +16,7 @@
 	--color-purple-bright: #7b2cbf;
 	--color-purple-light: #9d4edd;
 	--gradient-purple: linear-gradient(135deg, #9d4edd 0%, #7b2cbf 100%);
-	--gradient-purple-animated: linear-gradient(45deg, #0a001a, #6b1cb0, #b44eff, #6b1cb0, #0a001a);
+	--gradient-purple-animated: linear-gradient(45deg, #4a0080, #7b2cbf, #c77dff, #7b2cbf, #4a0080);
 	--button-glow: 0 4px 12px rgba(123, 44, 191, 0.4);
 	--button-glow-hover: 0 6px 16px rgba(123, 44, 191, 0.6);
 	--color-badge-text: #ffffff;
