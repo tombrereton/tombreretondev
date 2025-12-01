@@ -213,7 +213,7 @@
 		<img src={imageSrc} alt="Face following gaze" class="face-image" />
 	{/if}
 	{#if needsPermission && !orientationEnabled}
-		<button class="permission-button" onclick={enableOrientation}> Enable Tilt </button>
+		<button class="permission-button" onclick={enableOrientation}> Bring Me to Life </button>
 	{/if}
 	{#if statusMessage}
 		<div class="status-message">{statusMessage}</div>
