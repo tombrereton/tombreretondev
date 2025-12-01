@@ -7,8 +7,10 @@
 <div class="container">
 	<section class="hero">
 		<FaceTracker size={200} />
-		<h1>Tom Brereton</h1>
-		<p>Lead Software Engineer | Software Architect | Cloud Engineer</p>
+		<div class="hero-text">
+			<h1>Tom Brereton</h1>
+			<p>Lead Software Engineer | Software Architect | Cloud Engineer</p>
+		</div>
 		<ContactLinks size={28} />
 	</section>
 
@@ -39,14 +41,22 @@
 		gap: 2rem;
 	}
 
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
 	.hero h1 {
 		font-size: 3rem;
-		margin-bottom: 0.5rem;
+		margin: 0;
 	}
 
 	.hero p {
 		font-size: 1.25rem;
 		color: var(--color-text-secondary);
+		margin: 0;
 	}
 
 	.projects {
