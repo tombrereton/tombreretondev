@@ -16,8 +16,7 @@
 		<h2>Projects</h2>
 		<div class="projects-grid">
 			<ProjectCard owner="tombrereton" repo="dotnet-api" />
-			<ProjectCard owner="tombrereton" repo="dotnet-api" />
-			<ProjectCard owner="tombrereton" repo="dotnet-api" />
+			<ProjectCard owner="tombrereton" repo="flappy-bird" />
 			<!-- Add more projects here -->
 			<!-- <ProjectCard owner="tombrereton" repo="another-repo" /> -->
 		</div>
