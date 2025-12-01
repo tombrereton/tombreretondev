@@ -19,6 +19,7 @@
 	--gradient-purple-animated: linear-gradient(45deg, #0a001a, #6b1cb0, #b44eff, #6b1cb0, #0a001a);
 	--button-glow: 0 4px 12px rgba(123, 44, 191, 0.4);
 	--button-glow-hover: 0 6px 16px rgba(123, 44, 191, 0.6);
+	--color-badge-text: #ffffff;
 
 	/* Striped background */
 	--stripe-color-1: #f8f9fa;
@@ -44,6 +45,7 @@
 		--gradient-purple-animated: linear-gradient(45deg, #0a001a, #7b2cbf, #c77dff, #7b2cbf, #0a001a);
 		--button-glow: 0 6px 20px rgba(180, 78, 255, 0.5);
 		--button-glow-hover: 0 8px 28px rgba(180, 78, 255, 0.7);
+		--color-badge-text: #ffffff;
 	}
 }
 
@@ -65,6 +67,7 @@
 	--gradient-purple-animated: linear-gradient(45deg, #0a001a, #7b2cbf, #c77dff, #7b2cbf, #0a001a);
 	--button-glow: 0 6px 20px rgba(180, 78, 255, 0.5);
 	--button-glow-hover: 0 8px 28px rgba(180, 78, 255, 0.7);
+	--color-badge-text: #ffffff;
 }
 
 [data-theme='light'] {
