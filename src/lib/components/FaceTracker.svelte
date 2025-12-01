@@ -23,6 +23,7 @@
 	let orientationEnabled = $state(false);
 	let imagesPreloaded = $state(false);
 	let preloadedImages: HTMLImageElement[] = [];
+	let imageCache: Map<string, string> = new Map();
 	let idleTimer: number | null = null;
 	let isIdle = $state(false);
 	let idleAnimationFrame: number | null = null;
@@ -30,6 +31,7 @@
 	let lastGazeX = 0;
 	let lastGazeY = 0;
 	let showToast = $state(false);
+	let isPreloading = false; // Guard to prevent duplicate preloading
 
 	function clamp(value: number, min: number, max: number): number {
 		return Math.max(min, Math.min(max, value));
@@ -71,7 +73,7 @@
 		const py = quantizeToGrid(clampedY);
 
 		const filename = gridToFilename(px, py);
-		imageSrc = `${basePath}${filename}`;
+		imageSrc = imageCache.get(filename) || `${basePath}${filename}`;
 
 		if (debug) {
 			debugInfo = `Mouse: (${Math.round(clientX - rect.left)}, ${Math.round(clientY - rect.top)})<br/>Image: ${filename}`;
@@ -128,7 +130,7 @@
 		const py = quantizeToGrid(wanderY);
 
 		const filename = gridToFilename(px, py);
-		imageSrc = `${basePath}${filename}`;
+		imageSrc = imageCache.get(filename) || `${basePath}${filename}`;
 
 		if (isIdle) {
 			idleAnimationFrame = requestAnimationFrame(() => startIdleAnimation());
@@ -190,7 +192,7 @@
 		const py = quantizeToGrid(ny);
 
 		const filename = gridToFilename(px, py);
-		imageSrc = `${basePath}${filename}`;
+		imageSrc = imageCache.get(filename) || `${basePath}${filename}`;
 
 		if (debug) {
 			debugInfo = `Tilt: (β=${Math.round(beta)}°, γ=${Math.round(gamma)}°)<br/>Image: ${filename}`;
@@ -247,18 +249,52 @@
 		}
 	}
 
-	function preloadImages() {
+	async function preloadImages() {
+		// Prevent duplicate preloading if already in progress or completed
+		if (isPreloading || imagesPreloaded) {
+			if (debug) console.log('Preloading already done or in progress, skipping...');
+			return;
+		}
+
+		isPreloading = true;
+		if (debug) console.log('Starting image preload...');
+
 		// Generate all possible image URLs and preload them
 		// Store in component scope to prevent garbage collection
+		const loadPromises: Promise<void>[] = [];
+
 		for (let px = P_MIN; px <= P_MAX; px += STEP) {
 			for (let py = P_MIN; py <= P_MAX; py += STEP) {
 				const filename = gridToFilename(px, py);
 				const img = new Image();
-				img.src = `${basePath}${filename}`;
+
+				// Create a promise that resolves when the image loads
+				const loadPromise = new Promise<void>((resolve, reject) => {
+					img.onload = () => resolve();
+					img.onerror = () => {
+						console.error(`Failed to load image: ${filename}`);
+						resolve(); // Still resolve to not block other images
+					};
+				});
+
+				const fullPath = `${basePath}${filename}`;
+				img.src = fullPath;
 				preloadedImages.push(img);
+				loadPromises.push(loadPromise);
+
+				// Cache the filename -> full path mapping
+				imageCache.set(filename, fullPath);
 			}
 		}
+
+		// Wait for all images to load
+		await Promise.all(loadPromises);
 		imagesPreloaded = true;
+		isPreloading = false;
+
+		if (debug) {
+			console.log(`Preloaded ${preloadedImages.length} images`);
+		}
 	}
 
 	onMount(() => {
