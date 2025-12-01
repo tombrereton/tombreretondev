@@ -2,6 +2,7 @@
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import FaceTracker from '$lib/components/FaceTracker.svelte';
 	import ContactLinks from '$lib/components/ContactLinks.svelte';
+	import AvailabilityBadge from '$lib/components/AvailabilityBadge.svelte';
 </script>
 
 <div class="container">
@@ -10,6 +11,7 @@
 		<div class="hero-text">
 			<h1>Tom Brereton</h1>
 			<p>Lead Software Engineer | Software Architect | Cloud Engineer</p>
+			<AvailabilityBadge href="mailto:mail@tombrereton.dev" message="Available for Contract Work" />
 		</div>
 		<ContactLinks size={28} />
 	</section>
@@ -34,29 +36,36 @@
 
 	.hero {
 		text-align: center;
-		padding: 12rem 0 4rem 0;
+		padding: 8rem 0 6rem 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
+		gap: 3rem;
 	}
 
 	.hero-text {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 0.75rem;
+	}
+
+	.hero-text :global(.availability-badge) {
+		margin-top: 1.25rem;
 	}
 
 	.hero h1 {
 		font-size: 3rem;
 		margin: 0;
+		font-weight: 700;
+		letter-spacing: -0.02em;
 	}
 
 	.hero p {
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		color: var(--color-text-secondary);
 		margin: 0;
+		font-weight: 400;
 	}
 
 	.projects {
