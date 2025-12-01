@@ -229,6 +229,16 @@
 
 	async function enableOrientation() {
 		await requestOrientationPermission();
+
+		// Scroll to face tracker if not in view
+		if (container) {
+			const rect = container.getBoundingClientRect();
+			const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+			if (!isInView) {
+				container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}
+		}
 	}
 
 	function preloadImages() {
