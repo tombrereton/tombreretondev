@@ -24,7 +24,19 @@
 
 	async function fetchRepo() {
 		try {
-			const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+			const headers: HeadersInit = {
+				Accept: 'application/vnd.github.v3+json'
+			};
+
+			// Add authentication if token is available
+			const token = import.meta.env.VITE_GITHUB_TOKEN;
+			if (token) {
+				headers['Authorization'] = `Bearer ${token}`;
+			}
+
+			const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
+				headers
+			});
 
 			if (!response.ok) {
 				throw new Error('Failed to fetch repository');
