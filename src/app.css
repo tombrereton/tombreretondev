@@ -1,0 +1,96 @@
+/* CSS Custom Properties for theming */
+:root {
+	/* Light mode colors */
+	--color-background: #f8f9fa;
+	--color-background-alt: #e9ecef;
+	--color-background-card: #ffffff;
+	--color-text: #212529;
+	--color-text-secondary: #6c757d;
+	--color-border: #e9ecef;
+	--color-accent: #10b981;
+	--color-accent-hover: #059669;
+
+	/* Evanescence purple theme */
+	--color-purple-dark: #1a0033;
+	--color-purple-mid: #4a0080;
+	--color-purple-bright: #7b2cbf;
+	--color-purple-light: #9d4edd;
+
+	/* Striped background */
+	--stripe-color-1: #f8f9fa;
+	--stripe-color-2: #f1f3f5;
+}
+
+/* Auto dark mode based on system preference */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #0d1117;
+		--color-background-alt: #161b22;
+		--color-background-card: #1c2128;
+		--color-text: #e6edf3;
+		--color-text-secondary: #8b949e;
+		--color-border: #30363d;
+		--color-accent: #10b981;
+		--color-accent-hover: #059669;
+
+		--stripe-color-1: #0d1117;
+		--stripe-color-2: #161b22;
+	}
+}
+
+/* Manual override with data-theme attribute */
+[data-theme='dark'] {
+	--color-background: #0d1117;
+	--color-background-alt: #161b22;
+	--color-background-card: #1c2128;
+	--color-text: #e6edf3;
+	--color-text-secondary: #8b949e;
+	--color-border: #30363d;
+	--color-accent: #10b981;
+	--color-accent-hover: #059669;
+
+	--stripe-color-1: #0d1117;
+	--stripe-color-2: #161b22;
+}
+
+[data-theme='light'] {
+	--color-background: #f8f9fa;
+	--color-background-alt: #e9ecef;
+	--color-background-card: #ffffff;
+	--color-text: #212529;
+	--color-text-secondary: #6c757d;
+	--color-border: #e9ecef;
+
+	--stripe-color-1: #f8f9fa;
+	--stripe-color-2: #f1f3f5;
+}
+
+/* Global styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family:
+		'Geist',
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		'Roboto',
+		'Oxygen',
+		'Ubuntu',
+		'Cantarell',
+		'Fira Sans',
+		'Droid Sans',
+		'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: var(--color-background);
+	color: var(--color-text);
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}

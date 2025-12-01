@@ -47,7 +47,7 @@
 
 	.hero p {
 		font-size: 1.25rem;
-		color: #6c757d;
+		color: var(--color-text-secondary);
 	}
 
 	.projects {

@@ -114,14 +114,14 @@
 
 <style>
 	.project-card {
-		background: white;
+		background: var(--color-background-card);
 		border-radius: 8px;
 		text-decoration: none;
 		color: inherit;
 		transition:
 			transform 0.2s,
 			box-shadow 0.2s;
-		border: 1px solid #e9ecef;
+		border: 1px solid var(--color-border);
 		display: flex;
 		flex-direction: row;
 		gap: 0;
@@ -172,7 +172,7 @@
 	.error-card {
 		padding: 2rem;
 		text-align: center;
-		color: #6c757d;
+		color: var(--color-text-secondary);
 	}
 
 	.error-card {
@@ -194,14 +194,14 @@
 	.language {
 		font-size: 0.875rem;
 		padding: 0.25rem 0.75rem;
-		background: #f8f9fa;
+		background: var(--color-background-alt);
 		border-radius: 12px;
 		white-space: nowrap;
 		font-family: 'Geist', sans-serif;
 	}
 
 	.description {
-		color: #6c757d;
+		color: var(--color-text-secondary);
 		flex-grow: 1;
 		line-height: 1.5;
 	}
@@ -216,7 +216,7 @@
 		display: flex;
 		gap: 1rem;
 		font-size: 0.875rem;
-		color: #6c757d;
+		color: var(--color-text-secondary);
 	}
 
 	.topics {

@@ -67,7 +67,7 @@
 	}
 
 	.contact-links a {
-		color: #212529;
+		color: var(--color-text);
 		transition: all 0.3s ease;
 		display: flex;
 		align-items: center;
