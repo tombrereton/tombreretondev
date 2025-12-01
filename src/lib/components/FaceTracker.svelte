@@ -67,19 +67,26 @@
 		}
 	}
 
-	let lastUpdate = 0;
-	const UPDATE_INTERVAL = 50; // Update every 50ms (20 FPS)
+	let pendingUpdate = false;
+	let lastMouseX = 0;
+	let lastMouseY = 0;
 
 	function handleMouseMove(e: MouseEvent) {
 		// Don't update from mouse if orientation is enabled
 		if (orientationEnabled) return;
 
-		// Throttle updates for better performance
-		const now = Date.now();
-		if (now - lastUpdate < UPDATE_INTERVAL) return;
-		lastUpdate = now;
+		// Store latest mouse position
+		lastMouseX = e.clientX;
+		lastMouseY = e.clientY;
 
-		setFromClient(e.clientX, e.clientY);
+		// Use requestAnimationFrame for smooth updates
+		if (!pendingUpdate) {
+			pendingUpdate = true;
+			requestAnimationFrame(() => {
+				setFromClient(lastMouseX, lastMouseY);
+				pendingUpdate = false;
+			});
+		}
 	}
 
 	function handleTouchMove(e: TouchEvent) {
