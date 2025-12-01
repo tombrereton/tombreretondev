@@ -22,6 +22,7 @@
 	let orientationEnabled = $state(false);
 	let statusMessage = $state('');
 	let imagesPreloaded = $state(false);
+	let preloadedImages: HTMLImageElement[] = [];
 
 	function clamp(value: number, min: number, max: number): number {
 		return Math.max(min, Math.min(max, value));
@@ -152,13 +153,13 @@
 
 	function preloadImages() {
 		// Generate all possible image URLs and preload them
-		const images: HTMLImageElement[] = [];
+		// Store in component scope to prevent garbage collection
 		for (let px = P_MIN; px <= P_MAX; px += STEP) {
 			for (let py = P_MIN; py <= P_MAX; py += STEP) {
 				const filename = gridToFilename(px, py);
 				const img = new Image();
 				img.src = `${basePath}${filename}`;
-				images.push(img);
+				preloadedImages.push(img);
 			}
 		}
 		imagesPreloaded = true;
