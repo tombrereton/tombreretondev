@@ -1,13 +1,15 @@
 <script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import FaceTracker from '$lib/components/FaceTracker.svelte';
+	import ContactLinks from '$lib/components/ContactLinks.svelte';
 </script>
 
 <div class="container">
 	<section class="hero">
 		<FaceTracker size={200} />
 		<h1>Tom Brereton</h1>
-		<p>Software Engineer | Cloud Engineer | Software Architect</p>
+		<p>Lead Software Engineer | Software Architect | Cloud Engineer</p>
+		<ContactLinks size={28} />
 	</section>
 
 	<section class="projects">
