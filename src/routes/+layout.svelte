@@ -7,7 +7,8 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" type="image/svg+xml" href={favicon} />
+	<link rel="apple-touch-icon" href={favicon} />
 
 	<!-- Primary Meta Tags -->
 	<title>Tom Brereton | .NET & Azure Contractor Australia | Lead Software Engineer</title>
