@@ -76,16 +76,24 @@
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
-	.theme-toggle:hover {
-		color: var(--color-purple-light);
-	}
-
-	.theme-toggle:hover svg {
-		transform: rotate(30deg);
-	}
-
 	.theme-toggle svg {
 		display: block;
 		transition: transform 0.3s ease;
+	}
+
+	/* Only apply hover effects on devices that support hover (not touch screens) */
+	@media (hover: hover) and (pointer: fine) {
+		.theme-toggle:hover {
+			color: var(--color-purple-light);
+		}
+
+		.theme-toggle:hover svg {
+			transform: rotate(30deg);
+		}
+	}
+
+	/* Active state for touch feedback */
+	.theme-toggle:active {
+		transform: scale(0.95);
 	}
 </style>

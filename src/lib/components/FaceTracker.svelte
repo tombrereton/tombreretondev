@@ -353,14 +353,15 @@
 		position: fixed;
 		bottom: 2rem;
 		right: 2rem;
-		padding: 1rem 1.5rem;
+		padding: 1.125rem 2rem;
 		background: var(--gradient-purple-animated);
 		background-size: 300% 300%;
 		animation: gradient-shift 3s ease infinite;
 		color: white;
 		border: none;
 		border-radius: 50px;
-		font-size: 0.875rem;
+		font-family: 'Outfit', sans-serif;
+		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
 		z-index: 1000;
@@ -387,6 +388,15 @@
 
 	.permission-button:active {
 		transform: translateY(0);
+	}
+
+	@media (max-width: 768px) {
+		.permission-button {
+			bottom: 1.5rem;
+			right: 1.5rem;
+			padding: 1rem 1.75rem;
+			font-size: 0.9375rem;
+		}
 	}
 
 	.status-message {
