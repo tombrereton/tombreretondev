@@ -70,6 +70,11 @@
 		color: var(--color-text);
 	}
 
+	.availability-badge.available:hover {
+		color: var(--color-badge-text);
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
 	.availability-badge:not(.available) {
 		opacity: 0.6;
 		border-color: var(--color-border);
@@ -85,6 +90,14 @@
 		border-radius: 50%;
 		background: #10b981;
 		animation: pulse 2s ease-in-out infinite;
+		transition: all 0.3s ease;
+	}
+
+	.availability-badge.available:hover .status-dot {
+		background: #34d399;
+		box-shadow:
+			0 0 0 2px rgba(255, 255, 255, 0.9),
+			0 0 8px rgba(52, 211, 153, 0.6);
 	}
 
 	.availability-badge:not(.available) .status-dot {
