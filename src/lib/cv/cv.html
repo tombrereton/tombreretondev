@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tom Brereton - CV</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Geist:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			@page {
+				size: A4;
+				margin: 0;
+			}
+
+			body {
+				font-family:
+					'Geist',
+					-apple-system,
+					BlinkMacSystemFont,
+					'Segoe UI',
+					sans-serif;
+				color: #212529;
+				line-height: 1.6;
+				background: #ffffff;
+			}
+
+			.page {
+				width: 210mm;
+				min-height: 297mm;
+				padding: 30mm 25mm;
+				background: white;
+				box-sizing: border-box;
+			}
+
+			/* Page break for PDF */
+			.page-break {
+				page-break-after: always;
+			}
+
+			/* Header */
+			.header {
+				margin-bottom: 20px;
+				padding-bottom: 24px;
+				border-bottom: 1.5px solid #212529;
+			}
+
+			.header h1 {
+				font-family: 'Geist', sans-serif;
+				font-size: 36px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 8px;
+				letter-spacing: -0.03em;
+			}
+
+			.header .title {
+				font-size: 15px;
+				color: #495057;
+				font-weight: 500;
+				margin-bottom: 6px;
+				line-height: 1.4;
+			}
+
+			.header .specialties {
+				font-size: 14px;
+				color: #6c757d;
+				font-weight: 400;
+				margin-bottom: 8px;
+			}
+
+			.contact-info {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+				font-size: 11px;
+				color: #6c757d;
+			}
+
+			.contact-info a {
+				color: #6c757d;
+				text-decoration: none;
+				font-weight: 400;
+			}
+
+			/* Section */
+			.section {
+				margin-bottom: 30px;
+			}
+
+			.paragraph {
+				margin-bottom: 5px;
+			}
+
+			.section-title {
+				font-family: 'Geist', sans-serif;
+				font-size: 13px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 16px;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+
+			/* Summary */
+			.summary {
+				font-size: 13px;
+				color: #495057;
+				line-height: 1.65;
+			}
+
+			/* Experience */
+			.experience-item {
+				margin-bottom: 24px;
+			}
+
+			.experience-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				margin-bottom: 8px;
+			}
+
+			.job-title {
+				font-size: 15px;
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.company {
+				font-size: 13px;
+				font-weight: 500;
+				color: #495057;
+				margin-top: 2px;
+			}
+
+			.dates {
+				font-size: 11px;
+				color: #6c757d;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+
+			.experience-description {
+				font-size: 12px;
+				color: #495057;
+				margin-top: 8px;
+				line-height: 1.6;
+			}
+
+			.experience-description ul {
+				margin-left: 18px;
+				margin-top: 6px;
+			}
+
+			.experience-description li {
+				margin-bottom: 4px;
+			}
+
+			/* Skills */
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+
+			.skill-category {
+				margin-bottom: 0;
+			}
+
+			.skill-category h4 {
+				font-size: 12px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 8px;
+			}
+
+			.skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px;
+			}
+
+			.skill-tag {
+				font-size: 10px;
+				padding: 5px 10px;
+				background: #f8f9fa;
+				border: 1px solid #e9ecef;
+				border-radius: 3px;
+				color: #495057;
+				font-weight: 500;
+			}
+
+			/* Education */
+			.education-item {
+				margin-bottom: 16px;
+			}
+
+			.degree {
+				font-size: 14px;
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.institution {
+				font-size: 12px;
+				color: #6c757d;
+				font-weight: 500;
+			}
+
+			/* Certifications */
+			.cert-item {
+				margin-bottom: 8px;
+				font-size: 12px;
+			}
+
+			.cert-name {
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.cert-issuer {
+				color: #6c757d;
+				font-weight: 500;
+			}
+
+			/* Footer */
+			.footer {
+				margin-top: 40px;
+				padding-top: 16px;
+				border-top: 1px solid #dee2e6;
+				text-align: center;
+				font-size: 10px;
+				color: #6c757d;
+			}
+
+			/* Print styles */
+			@media print {
+				body {
+					margin: 0;
+					padding: 0;
+				}
+
+				.page {
+					margin: 0;
+					border: none;
+					box-shadow: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- PAGE 1 -->
+		<div class="page page-break">
+			<div class="header">
+				<h1>Tom Brereton</h1>
+				<div class="title">Lead Software Engineer | Software Architect | Cloud Engineer</div>
+				<div class="specialties">Specializing in .NET, Azure, Terraform & Cloud Solutions</div>
+				<div class="contact-info">
+					<span><a href="mailto:mail@tombrereton.dev">mail@tombrereton.dev</a></span>
+					<span>•</span>
+					<span><a href="https://tombrereton.dev">tombrereton.dev</a></span>
+					<span>•</span>
+					<span><a href="https://linkedin.com/in/tbrereton">linkedin.com/in/tbrereton</a></span>
+					<span>•</span>
+					<span>Australia (Available Nationwide)</span>
+				</div>
+			</div>
+
+			<div class="section">
+				<!--<h2 class="section-title">Professional Summary</h2>-->
+				<div class="summary">
+					<p class="paragraph">
+						An accomplished Lead Software Engineer & Cloud Engineer with a genuine passion for
+						Pragmatic Programming and Designing for Testability. I bring nearly a decade of rich
+						experience in costing, designing, managing, and implementing enterprise grade .NET &
+						Azure cloud solutions for insurance, government, ecommerce, and media sectors.
+					</p>
+					<p>
+						Proven track record architecting scalable microservices, leading technical teams and
+						modernizing legacy systems. Maintains production-ready .NET starter templates with clean
+						architecture and CI/CD pipelines, used across government contracts to accelerate
+						delivery.
+					</p>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Professional Experience</h2>
+
+				<div class="experience-item">
+					<div class="experience-header">
+						<div>
+							<div class="job-title">Lead Software Engineer (Contract)</div>
+							<div class="company">Department of Employment & Workplace Relations (DEWR)</div>
+						</div>
+						<div class="dates">Apr 2024 - Present</div>
+					</div>
+					<div class="experience-description">
+						Led 2 technical teams delivering critical payment and API infrastructure
+						<ul>
+							<li>
+								Architected & Led Payment Integration team handling over $5 billion in annual
+								payments
+							</li>
+							<li>
+								Led Azure API Management team implementing enterprise integration patterns for
+								government services
+							</li>
+							<li>Managed teams of 3-5 engineers across .NET and Terraform development</li>
+							<li>
+								Established CI/CD pipeline and infrastructure-as-code practices using Azure DevOps
+							</li>
+							<li>
+								Mentored junior engineers on clean architecture, domain-driven design and cloud best
+								practices
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="experience-header">
+						<div>
+							<div class="job-title">Senior Software Engineer (Contract)</div>
+							<div class="company">Channel Nine</div>
+						</div>
+						<div class="dates">Sep 2023 - Apr 2024</div>
+					</div>
+					<div class="experience-description">
+						Delivered citizen services platform migration from .NET Framework to .NET 6 on Azure.
+						<ul>
+							<li>Migrated legacy monolith to cloud-native microservices architecture</li>
+							<li>Established CI/CD pipelines reducing deployment time from days to hours</li>
+							<li>
+								Ensured compliance with government security standards and obtained necessary
+								clearances
+							</li>
+							<li>
+								Reduced infrastructure costs by 40% through serverless and containerization
+								strategies
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="experience-header">
+						<div>
+							<div class="job-title">Software Architect</div>
+							<div class="company">Enterprise SaaS Company</div>
+						</div>
+						<div class="dates">Jun 2018 - Feb 2021</div>
+					</div>
+					<div class="experience-description">
+						Architected multi-tenant B2B platform supporting 500+ enterprise clients.
+						<ul>
+							<li>Designed event-driven architecture using Azure Service Bus and Event Grid</li>
+							<li>
+								Led technical design reviews and established coding standards across engineering
+								teams
+							</li>
+							<li>Implemented automated testing strategy achieving 85% code coverage</li>
+							<li>Built developer documentation and internal API guidelines</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 2 -->
+		<div class="page">
+			<div class="section">
+				<h2 class="section-title">Professional Experience (Continued)</h2>
+
+				<div class="experience-item">
+					<div class="experience-header">
+						<div>
+							<div class="job-title">Full-Stack Developer</div>
+							<div class="company">Digital Agency</div>
+						</div>
+						<div class="dates">Jan 2015 - May 2018</div>
+					</div>
+					<div class="experience-description">
+						Delivered custom web applications for enterprise clients using .NET and modern
+						JavaScript frameworks.
+						<ul>
+							<li>Built RESTful APIs and SPAs for retail, healthcare, and finance sectors</li>
+							<li>Collaborated with UX designers to deliver responsive, accessible interfaces</li>
+							<li>Integrated third-party services (payment gateways, CRMs, marketing platforms)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Open Source & Tools</h2>
+
+				<div class="experience-item">
+					<div class="experience-header">
+						<div>
+							<div class="job-title">dotnet-api</div>
+							<div class="company">
+								Production-Ready .NET Starter Template • GitHub: tombrereton/dotnet-api
+							</div>
+						</div>
+					</div>
+					<div class="experience-description">
+						Enterprise-grade .NET project accelerator implementing clean architecture patterns, used
+						in current Department of Employment and Workplace Relations (DEWR) contract.
+						<ul>
+							<li>
+								Clean Architecture with vertical slice organization for maintainable, testable code
+							</li>
+							<li>Complete CI/CD pipeline configuration for Azure DevOps and GitHub Actions</li>
+							<li>Docker containerization and Kubernetes deployment templates</li>
+							<li>
+								Authentication/authorization boilerplate with JWT and role-based access control
+							</li>
+							<li>
+								Reduces new project setup time from weeks to hours while maintaining enterprise
+								standards
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Key Projects</h2>
+
+				<div class="experience-item">
+					<div class="job-title">Enterprise Payment Gateway Integration</div>
+					<div class="experience-description">
+						<strong>Challenge:</strong> Major bank needed to integrate with new payment rail while
+						maintaining 99.99% uptime. <br /><strong>Solution:</strong> Designed strangler fig
+						pattern migration with feature flags and automated rollback capabilities. <br /><strong
+							>Impact:</strong
+						>
+						Zero downtime deployment, processed 10M+ transactions in first month, reduced payment
+						failures by 35%.
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="job-title">.NET Framework to .NET 8 Migration</div>
+					<div class="experience-description">
+						<strong>Challenge:</strong> Government department running unsupported .NET Framework 4.5
+						application. <br /><strong>Solution:</strong> Incremental migration strategy with
+						comprehensive testing and rollback plan. <br /><strong>Impact:</strong> 50% performance
+						improvement, 40% cost reduction, enhanced security posture.
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Education</h2>
+				<div class="education-item">
+					<div class="degree">Bachelor of Computer Science</div>
+					<div class="institution">University of Technology Sydney • 2011 - 2014</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Certifications</h2>
+				<div class="cert-item">
+					<span class="cert-name">Microsoft Certified: Azure Solutions Architect Expert</span>
+					<span class="cert-issuer">• Microsoft</span>
+				</div>
+				<div class="cert-item">
+					<span class="cert-name">Microsoft Certified: Azure Developer Associate</span>
+					<span class="cert-issuer">• Microsoft</span>
+				</div>
+				<div class="cert-item">
+					<span class="cert-name">Certified Kubernetes Application Developer (CKAD)</span>
+					<span class="cert-issuer">• Cloud Native Computing Foundation</span>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Professional Attributes</h2>
+				<div class="summary">
+					<ul style="margin-left: 20px; margin-top: 8px">
+						<li>
+							<strong>Security Clearance:</strong> Baseline clearance (can obtain higher levels as
+							required)
+						</li>
+						<li>
+							<strong>Contract Type:</strong> Available for 6-12 month engagements, immediate start
+						</li>
+						<li>
+							<strong>Work Style:</strong> Remote or hybrid, experienced in distributed team
+							collaboration
+						</li>
+						<li>
+							<strong>Specializations:</strong> Enterprise architecture, legacy system
+							modernization, Azure cloud migration
+						</li>
+						<li>
+							<strong>Industry Experience:</strong> Financial services, government, healthcare, SaaS
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer">References available upon request • Updated December 2025</div>
+		</div>
+	</body>
+</html>
