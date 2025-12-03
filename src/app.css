@@ -20,6 +20,8 @@
 	--button-glow: 0 4px 12px rgba(123, 44, 191, 0.4);
 	--button-glow-hover: 0 6px 16px rgba(123, 44, 191, 0.6);
 	--color-badge-text: #ffffff;
+	--color-circle-bg: rgba(123, 44, 191, 0.15);
+	--color-circle-text: #7b2cbf;
 
 	/* Striped background */
 	--stripe-color-1: #f8f9fa;
@@ -46,6 +48,8 @@
 		--button-glow: 0 6px 20px rgba(180, 78, 255, 0.5);
 		--button-glow-hover: 0 8px 28px rgba(180, 78, 255, 0.7);
 		--color-badge-text: #ffffff;
+		--color-circle-bg: rgba(157, 78, 221, 0.25);
+		--color-circle-text: #c77dff;
 	}
 }
 
@@ -68,6 +72,8 @@
 	--button-glow: 0 6px 20px rgba(180, 78, 255, 0.5);
 	--button-glow-hover: 0 8px 28px rgba(180, 78, 255, 0.7);
 	--color-badge-text: #ffffff;
+	--color-circle-bg: rgba(157, 78, 221, 0.25);
+	--color-circle-text: #c77dff;
 }
 
 [data-theme='light'] {
