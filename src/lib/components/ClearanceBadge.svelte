@@ -101,8 +101,8 @@
 		justify-content: center;
 		width: 16px;
 		height: 16px;
-		background: rgba(123, 44, 191, 0.1);
-		color: var(--color-purple-bright);
+		background: var(--color-circle-bg);
+		color: var(--color-circle-text);
 		border-radius: 50%;
 		font-size: 0.7rem;
 		font-weight: bold;
@@ -114,7 +114,7 @@
 		justify-content: center;
 		width: 16px;
 		height: 16px;
-		background: rgba(123, 44, 191, 0.1);
+		background: var(--color-circle-bg);
 		border-radius: 50%;
 		flex-shrink: 0;
 	}
