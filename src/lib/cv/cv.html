@@ -120,7 +120,16 @@
 
 			/* Experience */
 			.experience-item {
-				margin-bottom: 16px;
+				margin-bottom: 24px;
+				padding-left: 12px;
+				border-left: 2px solid #e9ecef;
+			}
+
+			.experience-item > .company {
+				font-size: 13px;
+				font-weight: 500;
+				color: #495057;
+				margin-bottom: 8px;
 			}
 
 			.experience-header {
@@ -134,13 +143,6 @@
 				font-size: 15px;
 				font-weight: 700;
 				color: #212529;
-			}
-
-			.company {
-				font-size: 13px;
-				font-weight: 500;
-				color: #495057;
-				margin-top: 2px;
 			}
 
 			.dates {
@@ -185,17 +187,39 @@
 				font-weight: 500;
 			}
 
-			/* Multi-role experience (minimal spacing grouping) */
+			/* Multi-role experience (LinkedIn-style grouping) */
 			.company-group {
-				margin-bottom: 16px;
+				margin-bottom: 24px;
+				padding-left: 12px;
+				border-left: 2px solid #e9ecef;
+			}
+
+			.company-group-header {
+				margin-bottom: 8px;
+			}
+
+			.company-group-header .company {
+				font-size: 13px;
+				font-weight: 500;
+				color: #495057;
+			}
+
+			.company-group .tech-stack {
+				margin-bottom: 10px;
 			}
 
 			.company-group .experience-item {
 				margin-bottom: 5px;
+				border-left: none;
+				padding-left: 0;
 			}
 
 			.company-group .experience-item:last-child {
 				margin-bottom: 0;
+			}
+
+			.company-group .experience-item .company {
+				display: none;
 			}
 
 			/* Skills */
@@ -323,18 +347,16 @@
 				<h2 class="section-title">Professional Experience</h2>
 
 				<div class="experience-item">
-					<div class="experience-header">
-						<div>
-							<div class="job-title">Lead Software Engineer (Contract)</div>
-							<div class="company">Department of Employment & Workplace Relations (DEWR)</div>
-						</div>
-						<div class="dates">Apr 2024 - Present</div>
-					</div>
+					<div class="company">Department of Employment & Workplace Relations (DEWR)</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">Terraform</span>
 						<span class="tech-tag">SQL Server</span>
+					</div>
+					<div class="experience-header">
+						<div class="job-title">Lead Software Engineer (Contract)</div>
+						<div class="dates">Apr 2024 - Present</div>
 					</div>
 					<div class="experience-description">
 						Led 2 technical teams delivering critical payment and API infrastructure
@@ -360,19 +382,17 @@
 				</div>
 
 				<div class="experience-item">
-					<div class="experience-header">
-						<div>
-							<div class="job-title">Senior Software Engineer (Contract)</div>
-							<div class="company">Channel Nine</div>
-						</div>
-						<div class="dates">Sep 2023 - Apr 2024</div>
-					</div>
+					<div class="company">Channel Nine</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
 						<span class="tech-tag">Terraform</span>
 						<span class="tech-tag">AWS</span>
 						<span class="tech-tag">SQL Server</span>
 						<span class="tech-tag">On Premise Servers</span>
+					</div>
+					<div class="experience-header">
+						<div class="job-title">Senior Software Engineer (Contract)</div>
+						<div class="dates">Sep 2023 - Apr 2024</div>
 					</div>
 					<div class="experience-description">
 						Enhanced .NET revenue critical solutions and cloud infrastructure for Channel Nine,
@@ -402,6 +422,22 @@
 				<h2 class="section-title">Professional Experience (Continued)</h2>
 
 				<div class="company-group">
+					<div class="company-group-header">
+						<div class="company">Mantel Group</div>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">AWS</span>
+						<span class="tech-tag">.NET Core</span>
+						<span class="tech-tag">Terraform</span>
+						<span class="tech-tag">Bicep</span>
+						<span class="tech-tag">Azure Functions</span>
+						<span class="tech-tag">Kubernetes</span>
+						<span class="tech-tag">SQL Server</span>
+						<span class="tech-tag">Cosmos DB</span>
+						<span class="tech-tag">GitHub Actions</span>
+					</div>
+
 					<div class="experience-item">
 						<div class="experience-header">
 							<div>
@@ -409,18 +445,6 @@
 								<div class="company">Mantel Group</div>
 							</div>
 							<div class="dates">Mar 2023 - Sep 2023</div>
-						</div>
-						<div class="tech-stack">
-							<span class="tech-tag">Azure</span>
-							<span class="tech-tag">AWS</span>
-							<span class="tech-tag">.NET Core</span>
-							<span class="tech-tag">Terraform</span>
-							<span class="tech-tag">Bicep</span>
-							<span class="tech-tag">Azure Functions</span>
-							<span class="tech-tag">Kubernetes</span>
-							<span class="tech-tag">SQL Server</span>
-							<span class="tech-tag">Cosmos DB</span>
-							<span class="tech-tag">GitHub Actions</span>
 						</div>
 						<div class="experience-description">
 							Led engineering teams and cultivated executive client relationships, driving business
@@ -453,18 +477,6 @@
 							</div>
 							<div class="dates">Jul 2022 - Feb 2023</div>
 						</div>
-						<div class="tech-stack">
-							<span class="tech-tag">Azure</span>
-							<span class="tech-tag">AWS</span>
-							<span class="tech-tag">.NET Core</span>
-							<span class="tech-tag">Terraform</span>
-							<span class="tech-tag">Bicep</span>
-							<span class="tech-tag">Azure Functions</span>
-							<span class="tech-tag">Kubernetes</span>
-							<span class="tech-tag">SQL Server</span>
-							<span class="tech-tag">Cosmos DB</span>
-							<span class="tech-tag">GitHub Actions</span>
-						</div>
 						<div class="experience-description">
 							Delivered high-impact automation solutions for insurance clients, leading hackathon
 							innovations and establishing infrastructure-as-code practices across cloud platforms.
@@ -490,13 +502,7 @@
 				</div>
 
 				<div class="experience-item">
-					<div class="experience-header">
-						<div>
-							<div class="job-title">Founder & Principal Engineer</div>
-							<div class="company">Exify</div>
-						</div>
-						<div class="dates">Apr 2021 - Jul 2022</div>
-					</div>
+					<div class="company">Exify</div>
 					<div class="tech-stack">
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">.NET Core</span>
@@ -505,6 +511,10 @@
 						<span class="tech-tag">SQL Server</span>
 						<span class="tech-tag">Cosmos DB</span>
 						<span class="tech-tag">Azure DevOps</span>
+					</div>
+					<div class="experience-header">
+						<div class="job-title">Founder & Principal Engineer</div>
+						<div class="dates">Apr 2021 - Jul 2022</div>
 					</div>
 					<div class="experience-description">
 						Founded and led technical operations for a software consultancy, delivering event-driven
@@ -536,18 +546,16 @@
 				<h2 class="section-title">Professional Experience (Continued)</h2>
 
 				<div class="experience-item">
-					<div class="experience-header">
-						<div>
-							<div class="job-title">Senior Software Engineer (Contract)</div>
-							<div class="company">Constructionline</div>
-						</div>
-						<div class="dates">Jul 2020 - Mar 2021</div>
-					</div>
+					<div class="company">Constructionline</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">Docker</span>
 						<span class="tech-tag">Kubernetes</span>
+					</div>
+					<div class="experience-header">
+						<div class="job-title">Senior Software Engineer (Contract)</div>
+						<div class="dates">Jul 2020 - Mar 2021</div>
 					</div>
 					<div class="experience-description">
 						Delivered containerized .NET solutions and automated database deployment pipelines for
@@ -567,17 +575,15 @@
 				</div>
 
 				<div class="experience-item">
-					<div class="experience-header">
-						<div>
-							<div class="job-title">Full Stack Engineer</div>
-							<div class="company">Sport Betting Consultancy</div>
-						</div>
-						<div class="dates">Jan 2020 - Jun 2020</div>
-					</div>
+					<div class="company">Sport Betting Consultancy</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET Core</span>
 						<span class="tech-tag">Kubernetes</span>
 						<span class="tech-tag">On Premise Servers</span>
+					</div>
+					<div class="experience-header">
+						<div class="job-title">Full Stack Engineer</div>
+						<div class="dates">Jan 2020 - Jun 2020</div>
 					</div>
 					<div class="experience-description">
 						Architected and developed full-stack .NET solutions for proprietary sports betting
@@ -596,6 +602,18 @@
 				</div>
 
 				<div class="company-group">
+					<div class="company-group-header">
+						<div class="company">Asos</div>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">.NET Core</span>
+						<span class="tech-tag">Kubernetes</span>
+						<span class="tech-tag">SQL Server</span>
+						<span class="tech-tag">Cosmos DB</span>
+						<span class="tech-tag">Azure DevOps</span>
+					</div>
+
 					<div class="experience-item">
 						<div class="experience-header">
 							<div>
@@ -604,19 +622,9 @@
 							</div>
 							<div class="dates">Mar 2019 - Dec 2019</div>
 						</div>
-						<div class="tech-stack">
-							<span class="tech-tag">Azure</span>
-							<span class="tech-tag">.NET Core</span>
-							<span class="tech-tag">Kubernetes</span>
-							<span class="tech-tag">SQL Server</span>
-							<span class="tech-tag">Cosmos DB</span>
-							<span class="tech-tag">Azure DevOps</span>
-						</div>
 						<div class="experience-description">
 							Contributed to Asos's Kubernetes adoption and containerization strategy, while
 							mentoring junior engineers on cloud-native development practices.
-						</div>
-						<div class="experience-description">
 							<ul>
 								<li>
 									Played a key role in adopting Kubernetes (AKS) at Asos, driving cloud-native
@@ -640,19 +648,9 @@
 							</div>
 							<div class="dates">Sep 2018 - Feb 2019</div>
 						</div>
-						<div class="tech-stack">
-							<span class="tech-tag">Azure</span>
-							<span class="tech-tag">.NET Core</span>
-							<span class="tech-tag">Kubernetes</span>
-							<span class="tech-tag">SQL Server</span>
-							<span class="tech-tag">Cosmos DB</span>
-							<span class="tech-tag">Azure DevOps</span>
-						</div>
 						<div class="experience-description">
 							Led technical training initiatives and modernized legacy .NET applications through
 							re-platforming to .NET Core.
-						</div>
-						<div class="experience-description">
 							<ul>
 								<li>
 									Delivered comprehensive 9-hour training session on TDD, Test-Driven Development
@@ -674,19 +672,9 @@
 							</div>
 							<div class="dates">Sep 2017 - Aug 2018</div>
 						</div>
-						<div class="tech-stack">
-							<span class="tech-tag">Azure</span>
-							<span class="tech-tag">.NET Core</span>
-							<span class="tech-tag">Kubernetes</span>
-							<span class="tech-tag">SQL Server</span>
-							<span class="tech-tag">Cosmos DB</span>
-							<span class="tech-tag">Azure DevOps</span>
-						</div>
 						<div class="experience-description">
 							Demonstrated early leadership capabilities by leading the graduate cohort project
 							team.
-						</div>
-						<div class="experience-description">
 							<ul>
 								<li>
 									Led the team for the graduate project, coordinating deliverables and technical
