@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tom Brereton - CV</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Geist:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			@page {
+				size: A4;
+				margin: 0;
+			}
+
+			body {
+				font-family:
+					'Geist',
+					-apple-system,
+					BlinkMacSystemFont,
+					'Segoe UI',
+					sans-serif;
+				color: #212529;
+				line-height: 1.6;
+				background: #ffffff;
+			}
+
+			.page {
+				width: 210mm;
+				min-height: 297mm;
+				padding: 18mm 18mm;
+				background: white;
+				box-sizing: border-box;
+			}
+
+			/* Page break for PDF */
+			.page-break {
+				page-break-after: always;
+			}
+
+			/* Header */
+			.header {
+				margin-bottom: 20px;
+				padding-bottom: 24px;
+				border-bottom: 1.5px solid #212529;
+			}
+
+			.header h1 {
+				font-family: 'Geist', sans-serif;
+				font-size: 36px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 8px;
+				letter-spacing: -0.03em;
+			}
+
+			.header .title {
+				font-size: 15px;
+				color: #495057;
+				font-weight: 500;
+				margin-bottom: 6px;
+				line-height: 1.4;
+			}
+
+			.header .specialties {
+				font-size: 14px;
+				color: #6c757d;
+				font-weight: 400;
+				margin-bottom: 8px;
+			}
+
+			.contact-info {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+				font-size: 11px;
+				color: #6c757d;
+			}
+
+			.contact-info a {
+				color: #6c757d;
+				text-decoration: none;
+				font-weight: 400;
+			}
+
+			/* Section */
+			.section {
+				margin-bottom: 20px;
+			}
+
+			.paragraph {
+				margin-bottom: 5px;
+			}
+
+			.section-title {
+				font-family: 'Geist', sans-serif;
+				font-size: 13px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 16px;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+
+			/* Summary */
+			.summary {
+				font-size: 13px;
+				color: #495057;
+				line-height: 1.65;
+			}
+
+			/* Experience */
+			.experience-item {
+				margin-bottom: 24px;
+			}
+
+			.experience-item > .company {
+				font-size: 12px;
+				font-weight: 500;
+				color: #6c757d;
+				margin-bottom: 2px;
+			}
+
+			.experience-header {
+				font-size: 12px;
+				margin-bottom: 8px;
+				color: #495057;
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+			}
+
+			.job-title {
+				font-size: 14px;
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.dates {
+				font-size: 12px;
+				color: #6c757d;
+				font-weight: 400;
+				margin-left: auto;
+			}
+
+			.experience-header .separator {
+				color: #adb5bd;
+				font-weight: 400;
+				display: none;
+			}
+
+			.experience-description {
+				font-size: 12px;
+				color: #495057;
+				margin-top: 8px;
+				line-height: 1.6;
+			}
+
+			.experience-description ul {
+				margin-left: 18px;
+				margin-top: 6px;
+			}
+
+			.experience-description li {
+				margin-bottom: 4px;
+			}
+
+			/* Tech Stack */
+			.tech-stack {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-top: 8px;
+				margin-bottom: 8px;
+			}
+
+			.tech-tag {
+				font-size: 10px;
+				padding: 4px 8px;
+				background: #f1f3f5;
+				border: 1px solid #ced4da;
+				border-radius: 3px;
+				color: #495057;
+				font-weight: 500;
+			}
+
+			/* Multi-role experience (compact grouping) */
+			.company-group {
+				margin-bottom: 24px;
+			}
+
+			.company-group-header .company {
+				font-size: 12px;
+				font-weight: 500;
+				color: #6c757d;
+				margin-bottom: 2px;
+			}
+
+			.role-list {
+				margin-bottom: 8px;
+			}
+
+			.role-item {
+				font-size: 14px;
+				color: #495057;
+				margin-bottom: 3px;
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+			}
+
+			.role-item .role-title {
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.role-item .role-dates {
+				color: #6c757d;
+				margin-left: auto;
+			}
+
+			.role-item .role-separator {
+				color: #adb5bd;
+				font-weight: 400;
+				display: none;
+			}
+
+			.company-group .tech-stack {
+				margin-bottom: 10px;
+			}
+
+			.company-group .experience-description {
+				margin-top: 8px;
+			}
+
+			/* Skills */
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+
+			.skill-category {
+				margin-bottom: 0;
+			}
+
+			.skill-category h4 {
+				font-size: 12px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 8px;
+			}
+
+			.skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px;
+			}
+
+			.skill-tag {
+				font-size: 10px;
+				padding: 5px 10px;
+				background: #f8f9fa;
+				border: 1px solid #e9ecef;
+				border-radius: 3px;
+				color: #495057;
+				font-weight: 500;
+			}
+
+			/* Education */
+			.education-item {
+				margin-bottom: 16px;
+			}
+
+			.degree {
+				font-size: 14px;
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.institution {
+				font-size: 12px;
+				color: #6c757d;
+				font-weight: 500;
+			}
+
+			/* Certifications */
+			.cert-item {
+				margin-bottom: 8px;
+				font-size: 12px;
+			}
+
+			.cert-name {
+				font-weight: 700;
+				color: #212529;
+			}
+
+			.cert-issuer {
+				color: #6c757d;
+				font-weight: 500;
+			}
+
+			/* Footer */
+			.footer {
+				margin-top: 40px;
+				padding-top: 16px;
+				border-top: 1px solid #dee2e6;
+				text-align: center;
+				font-size: 10px;
+				color: #6c757d;
+			}
+
+			/* Print styles */
+			@media print {
+				body {
+					margin: 0;
+					padding: 0;
+				}
+
+				.page {
+					margin: 0;
+					border: none;
+					box-shadow: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- PAGE 1 -->
+		<div class="page">
+			<div class="header">
+				<h1>Tom Brereton</h1>
+				<div class="title">Lead Software Engineer | Software Architect | Cloud Engineer</div>
+				<div class="specialties">Specializing in .NET, Azure, Terraform & Cloud Solutions</div>
+				<div class="contact-info">
+					<span><a href="mailto:mail@tombrereton.dev">mail@tombrereton.dev</a></span>
+					<span>•</span>
+					<span><a href="https://tombrereton.dev">www.tombrereton.dev</a></span>
+					<span>•</span>
+					<span><a href="https://linkedin.com/in/tbrereton">linkedin.com/in/tbrereton</a></span>
+					<span>•</span>
+					<span>Australia (Available Nationwide)</span>
+				</div>
+			</div>
+
+			<div class="section">
+				<!--<h2 class="section-title">Professional Summary</h2>-->
+				<div class="summary">
+					Lead Software Engineer with 10+ years architecting enterprise .NET and Azure solutions for
+					government, insurance, media, and ecommerce sectors. Led teams delivering payment
+					platforms processing $5B+ annually (DEWR) and revenue-critical applications for Channel
+					Nine ($1B+). Maintains production-ready .NET starter templates with clean architecture and
+					CI/CD pipelines, used across current government contracts to accelerate delivery.
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Professional Experience</h2>
+
+				<div class="experience-item">
+					<div class="company">Department of Employment & Workplace Relations (DEWR)</div>
+					<div class="experience-header">
+						<span class="job-title">Lead Software Engineer (Contract)</span>
+						<span class="separator"> • </span>
+						<span class="dates">Apr 2024 - Present</span>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">.NET</span>
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">Terraform</span>
+						<span class="tech-tag">SQL Server</span>
+					</div>
+					<div class="experience-description">
+						Led teams delivering payment systems processing $5B annually and API infrastructure for
+						government services
+						<ul>
+							<li>
+								Architected & Led Payment Integration team handling over $5 billion in annual
+								payments
+							</li>
+							<li>
+								Led Azure API Management team implementing enterprise integration patterns for
+								government services
+							</li>
+							<li>Managed teams of 3-5 engineers across .NET and Terraform development</li>
+							<li>
+								Established CI/CD pipeline and infrastructure-as-code practices using Azure DevOps
+							</li>
+							<li>
+								Mentored junior engineers on clean architecture, domain-driven design and cloud best
+								practices
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="company">Channel Nine</div>
+					<div class="experience-header">
+						<span class="job-title">Senior Software Engineer (Contract)</span>
+						<span class="separator"> • </span>
+						<span class="dates">Sep 2023 - Apr 2024</span>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">.NET</span>
+						<span class="tech-tag">Terraform</span>
+						<span class="tech-tag">AWS</span>
+						<span class="tech-tag">SQL Server</span>
+						<span class="tech-tag">On Premise Servers</span>
+					</div>
+					<div class="experience-description">
+						Enhanced .NET revenue critical solutions and cloud infrastructure for Channel Nine,
+						improving system reliability and accelerating incident recovery.
+						<ul>
+							<li>
+								Delivered critical enhancements to .NET solutions which generate over $1 billion in
+								annual revenue
+							</li>
+							<li>
+								Improved system reliability by reducing Priority 2 incidents 10%, through load
+								balancer architecture optimization
+							</li>
+							<li>
+								Decreased Mean Time to Recovery (MTTR) from 8 hours to 30 minutes, using CI/CD
+								pipelines and Infrastructure as Code (AWS)
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 2 -->
+		<div class="page">
+			<div class="section">
+				<h2 class="section-title">Professional Experience (Continued)</h2>
+
+				<div class="company-group">
+					<div class="company-group-header">
+						<div class="company">Mantel Group</div>
+					</div>
+					<div class="role-list">
+						<div class="role-item">
+							<span class="role-title">Lead Software Engineer</span>
+							<span class="role-separator"> • </span>
+							<span class="role-dates">Mar 2023 - Sep 2023</span>
+						</div>
+						<div class="role-item">
+							<span class="role-title">Senior Software Engineer</span>
+							<span class="role-separator"> • </span>
+							<span class="role-dates">Jul 2022 - Feb 2023</span>
+						</div>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">AWS</span>
+						<span class="tech-tag">.NET Core</span>
+						<span class="tech-tag">Terraform</span>
+						<span class="tech-tag">Bicep</span>
+						<span class="tech-tag">Azure Functions</span>
+						<span class="tech-tag">Kubernetes</span>
+						<span class="tech-tag">SQL Server</span>
+						<span class="tech-tag">Cosmos DB</span>
+						<span class="tech-tag">GitHub Actions</span>
+					</div>
+					<div class="experience-description">
+						Progressed from Senior to Lead Software Engineer, delivering high-impact automation
+						solutions for insurance clients while cultivating executive relationships and driving
+						business growth through technical excellence.
+						<ul>
+							<li>
+								Led vital client projects with excellence in deliverables and best practices in .NET
+								Core for event-driven systems
+							</li>
+							<li>
+								Built strong professional relationships with top client executives, securing
+								additional business for Mantel Group
+							</li>
+							<li>
+								Effectively presented system designs to executive clients, ensuring alignment on
+								technical architecture
+							</li>
+							<li>Mentored software engineers, focusing on goal setting and professional growth</li>
+							<li>
+								Led engineering team to automate Claims Payments in .NET, significantly reducing
+								manual work and earning high client praise
+							</li>
+							<li>
+								Led winning client-based Hackathon project, earning more business and managing team
+								challenges effectively
+							</li>
+							<li>
+								Served as key interviewer for new candidates at Mantel Group, contributing to team
+								growth and talent selection
+							</li>
+							<li>Developed Bicep & Terraform templates for efficient infrastructure automation</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="company">Exify</div>
+					<div class="experience-header">
+						<span class="job-title">Founder & Principal Engineer</span>
+						<span class="separator"> • </span>
+						<span class="dates">Apr 2021 - Jul 2022</span>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">.NET Core</span>
+						<span class="tech-tag">Azure Functions</span>
+						<span class="tech-tag">Kubernetes</span>
+						<span class="tech-tag">SQL Server</span>
+						<span class="tech-tag">Cosmos DB</span>
+						<span class="tech-tag">Azure DevOps</span>
+					</div>
+					<div class="experience-description">
+						Founded and led technical operations for a software consultancy, delivering event-driven
+						.NET solutions and establishing engineering best practices for client projects.
+						<ul>
+							<li>
+								Designed and implemented C# .NET solutions using Docker and Kubernetes for scalable
+								cloud deployments
+							</li>
+							<li>
+								Architected event-driven systems and presented solution designs to stakeholders
+							</li>
+							<li>
+								Onboarded and mentored engineers on cloud architecture and development practices
+							</li>
+							<li>
+								Built and maintained CI/CD pipelines in Azure DevOps and GitHub Actions for
+								automated deployments
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="company">Constructionline</div>
+					<div class="experience-header">
+						<span class="job-title">Senior Software Engineer (Contract)</span>
+						<span class="separator"> • </span>
+						<span class="dates">Jul 2020 - Mar 2021</span>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">.NET</span>
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">Docker</span>
+						<span class="tech-tag">Kubernetes</span>
+					</div>
+					<div class="experience-description">
+						Delivered containerized .NET solutions and automated database deployment pipelines for
+						Azure cloud infrastructure.
+						<ul>
+							<li>
+								Designed and implemented C# .NET solutions using Docker and Kubernetes for container
+								orchestration
+							</li>
+							<li>Managed and optimized cloud solutions in Azure environment</li>
+							<li>
+								Built and maintained CI/CD pipelines for automated database migrations, reducing
+								deployment time
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PAGE 3 -->
+		<div class="page">
+			<div class="section">
+				<h2 class="section-title">Professional Experience (Continued)</h2>
+
+				<div class="experience-item">
+					<div class="company">Sport Betting Consultancy</div>
+					<div class="experience-header">
+						<span class="job-title">Full Stack Engineer</span>
+						<span class="separator"> • </span>
+						<span class="dates">Jan 2020 - Jun 2020</span>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">.NET Core</span>
+						<span class="tech-tag">Kubernetes</span>
+						<span class="tech-tag">On Premise Servers</span>
+					</div>
+					<div class="experience-description">
+						Architected and developed full-stack .NET solutions for proprietary sports betting
+						applications on on-premise infrastructure.
+						<ul>
+							<li>
+								Designed solution architecture for high-performance financial trading systems using
+								.NET Core
+							</li>
+							<li>
+								Built and deployed scalable applications on Kubernetes clusters in on-premise
+								environments
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="company-group">
+					<div class="company-group-header">
+						<div class="company">Asos</div>
+					</div>
+					<div class="role-list">
+						<div class="role-item">
+							<span class="role-title">Software Engineer</span>
+							<span class="role-separator"> • </span>
+							<span class="role-dates">Mar 2019 - Dec 2019</span>
+						</div>
+						<div class="role-item">
+							<span class="role-title">Associate Software Engineer</span>
+							<span class="role-separator"> • </span>
+							<span class="role-dates">Sep 2018 - Feb 2019</span>
+						</div>
+						<div class="role-item">
+							<span class="role-title">Graduate Software Engineer</span>
+							<span class="role-separator"> • </span>
+							<span class="role-dates">Sep 2017 - Aug 2018</span>
+						</div>
+					</div>
+					<div class="tech-stack">
+						<span class="tech-tag">Azure</span>
+						<span class="tech-tag">.NET Core</span>
+						<span class="tech-tag">Kubernetes</span>
+						<span class="tech-tag">SQL Server</span>
+						<span class="tech-tag">Cosmos DB</span>
+						<span class="tech-tag">Azure DevOps</span>
+					</div>
+					<div class="experience-description">
+						Progressed from Graduate to Software Engineer, contributing to Kubernetes adoption,
+						modernizing .NET applications, and mentoring junior engineers.
+						<ul>
+							<li>
+								Played a key role in adopting Kubernetes (AKS) at Asos, driving cloud-native
+								transformation
+							</li>
+							<li>
+								Delivered comprehensive 9-hour training session on TDD, Test-Driven Development
+								Patterns (TPP), and Test Doubles
+							</li>
+							<li>
+								Re-platformed services from .NET Framework to .NET Core, improving performance and
+								maintainability
+							</li>
+							<li>
+								Mentored graduates and interns on Azure, .NET Core, and container technologies
+							</li>
+							<li>
+								Containerized legacy Cloud Services with Docker, improving deployment efficiency
+							</li>
+							<li>
+								Led the graduate cohort project team, coordinating deliverables and technical
+								execution
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Education</h2>
+				<div class="education-item">
+					<div class="degree">Master of Computer Science</div>
+					<div class="institution">University of Birmingham • 2016 - 2017</div>
+				</div>
+				<div class="education-item">
+					<div class="degree">Bachelor of Civil & Structural Engineering</div>
+					<div class="institution">University of Adelaide • 2008 - 2013</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2 class="section-title">Professional Attributes</h2>
+				<div class="summary">
+					<ul style="margin-left: 20px; margin-top: 8px">
+						<li>
+							<strong>Security Clearance:</strong> Baseline clearance (can obtain higher levels as
+							required)
+						</li>
+						<li>
+							<strong>Contract Type:</strong> Available for 6-12 month engagements, immediate start
+						</li>
+						<li>
+							<strong>Work Style:</strong> Remote or hybrid, experienced in distributed team
+							collaboration
+						</li>
+						<li>
+							<strong>Specializations:</strong> Enterprise architecture, legacy system
+							modernization, Azure cloud migration
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer">References available upon request</div>
+		</div>
+	</body>
+</html>

@@ -56,6 +56,31 @@
 			/>
 		</svg>
 	</a>
+	<a href="/tom-brereton-cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width={size}
+			height={size}
+			viewBox="0 0 24 24"
+			fill="currentColor"
+		>
+			<!-- Document outline -->
+			<path
+				d="M11.363 2c4.155 0 2.637 6 2.637 6s6-1.65 6 2.457v11.543h-16v-20h7.363zm.826 -2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614z"
+			/>
+			<!-- CV text -->
+			<text
+				x="12"
+				y="15.5"
+				font-size="5.5"
+				font-weight="bold"
+				text-anchor="middle"
+				fill="currentColor"
+			>
+				CV
+			</text>
+		</svg>
+	</a>
 </div>
 
 <style>
