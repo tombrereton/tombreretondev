@@ -121,14 +121,12 @@
 			/* Experience */
 			.experience-item {
 				margin-bottom: 24px;
-				padding-left: 12px;
-				border-left: 2px solid #e9ecef;
 			}
 
 			.experience-item > .company {
-				font-size: 13px;
-				font-weight: 500;
-				color: #495057;
+				font-size: 15px;
+				font-weight: 700;
+				color: #212529;
 				margin-bottom: 8px;
 			}
 
@@ -140,15 +138,15 @@
 			}
 
 			.job-title {
-				font-size: 15px;
-				font-weight: 700;
+				font-size: 12px;
+				font-weight: 600;
 				color: #212529;
 			}
 
 			.dates {
-				font-size: 11px;
+				font-size: 12px;
 				color: #6c757d;
-				font-weight: 500;
+				font-weight: 400;
 				white-space: nowrap;
 			}
 
@@ -187,39 +185,43 @@
 				font-weight: 500;
 			}
 
-			/* Multi-role experience (LinkedIn-style grouping) */
+			/* Multi-role experience (compact grouping) */
 			.company-group {
 				margin-bottom: 24px;
-				padding-left: 12px;
-				border-left: 2px solid #e9ecef;
-			}
-
-			.company-group-header {
-				margin-bottom: 8px;
 			}
 
 			.company-group-header .company {
-				font-size: 13px;
-				font-weight: 500;
+				font-size: 15px;
+				font-weight: 700;
+				color: #212529;
+				margin-bottom: 8px;
+			}
+
+			.role-list {
+				margin-bottom: 8px;
+			}
+
+			.role-item {
+				font-size: 12px;
 				color: #495057;
+				margin-bottom: 3px;
+			}
+
+			.role-item .role-title {
+				font-weight: 600;
+				color: #212529;
+			}
+
+			.role-item .role-dates {
+				color: #6c757d;
 			}
 
 			.company-group .tech-stack {
 				margin-bottom: 10px;
 			}
 
-			.company-group .experience-item {
-				margin-bottom: 5px;
-				border-left: none;
-				padding-left: 0;
-			}
-
-			.company-group .experience-item:last-child {
-				margin-bottom: 0;
-			}
-
-			.company-group .experience-item .company {
-				display: none;
+			.company-group .experience-description {
+				margin-top: 8px;
 			}
 
 			/* Skills */
@@ -348,15 +350,15 @@
 
 				<div class="experience-item">
 					<div class="company">Department of Employment & Workplace Relations (DEWR)</div>
+					<div class="experience-header">
+						<div class="job-title">Lead Software Engineer (Contract)</div>
+						<div class="dates">Apr 2024 - Present</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">Terraform</span>
 						<span class="tech-tag">SQL Server</span>
-					</div>
-					<div class="experience-header">
-						<div class="job-title">Lead Software Engineer (Contract)</div>
-						<div class="dates">Apr 2024 - Present</div>
 					</div>
 					<div class="experience-description">
 						Led 2 technical teams delivering critical payment and API infrastructure
@@ -383,16 +385,16 @@
 
 				<div class="experience-item">
 					<div class="company">Channel Nine</div>
+					<div class="experience-header">
+						<div class="job-title">Senior Software Engineer (Contract)</div>
+						<div class="dates">Sep 2023 - Apr 2024</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
 						<span class="tech-tag">Terraform</span>
 						<span class="tech-tag">AWS</span>
 						<span class="tech-tag">SQL Server</span>
 						<span class="tech-tag">On Premise Servers</span>
-					</div>
-					<div class="experience-header">
-						<div class="job-title">Senior Software Engineer (Contract)</div>
-						<div class="dates">Sep 2023 - Apr 2024</div>
 					</div>
 					<div class="experience-description">
 						Enhanced .NET revenue critical solutions and cloud infrastructure for Channel Nine,
@@ -425,6 +427,16 @@
 					<div class="company-group-header">
 						<div class="company">Mantel Group</div>
 					</div>
+					<div class="role-list">
+						<div class="role-item">
+							<span class="role-title">Lead Software Engineer</span>
+							<span class="role-dates">Mar 2023 - Sep 2023</span>
+						</div>
+						<div class="role-item">
+							<span class="role-title">Senior Software Engineer</span>
+							<span class="role-dates">Jul 2022 - Feb 2023</span>
+						</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">AWS</span>
@@ -437,72 +449,47 @@
 						<span class="tech-tag">Cosmos DB</span>
 						<span class="tech-tag">GitHub Actions</span>
 					</div>
-
-					<div class="experience-item">
-						<div class="experience-header">
-							<div>
-								<div class="job-title">Lead Software Engineer</div>
-								<div class="company">Mantel Group</div>
-							</div>
-							<div class="dates">Mar 2023 - Sep 2023</div>
-						</div>
-						<div class="experience-description">
-							Led engineering teams and cultivated executive client relationships, driving business
-							growth through technical excellence and strategic architecture presentations.
-							<ul>
-								<li>
-									Led vital client projects with excellence in deliverables and best practices in
-									.NET Core for event-driven systems
-								</li>
-								<li>
-									Built strong professional relationships with top client executives, securing
-									additional business for Azenix
-								</li>
-								<li>
-									Effectively presented system designs to executive clients, ensuring alignment on
-									technical architecture
-								</li>
-								<li>
-									Mentored software engineers, focusing on goal setting and professional growth
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="experience-item">
-						<div class="experience-header">
-							<div>
-								<div class="job-title">Senior Software Engineer</div>
-								<div class="company">Mantel Group</div>
-							</div>
-							<div class="dates">Jul 2022 - Feb 2023</div>
-						</div>
-						<div class="experience-description">
-							Delivered high-impact automation solutions for insurance clients, leading hackathon
-							innovations and establishing infrastructure-as-code practices across cloud platforms.
-							<ul>
-								<li>
-									Led engineering team to automate Claims Payments in .NET, significantly reducing
-									manual work and earning high client praise
-								</li>
-								<li>
-									Led winning client-based Hackathon project, earning more business and managing
-									team challenges effectively
-								</li>
-								<li>
-									Served as key interviewer for new candidates at Azenix, contributing to team
-									growth and talent selection
-								</li>
-								<li>
-									Developed Bicep & Terraform templates for efficient infrastructure automation
-								</li>
-							</ul>
-						</div>
+					<div class="experience-description">
+						Progressed from Senior to Lead Software Engineer, delivering high-impact automation
+						solutions for insurance clients while cultivating executive relationships and driving
+						business growth through technical excellence.
+						<ul>
+							<li>
+								Led vital client projects with excellence in deliverables and best practices in .NET
+								Core for event-driven systems
+							</li>
+							<li>
+								Built strong professional relationships with top client executives, securing
+								additional business for Azenix
+							</li>
+							<li>
+								Effectively presented system designs to executive clients, ensuring alignment on
+								technical architecture
+							</li>
+							<li>Mentored software engineers, focusing on goal setting and professional growth</li>
+							<li>
+								Led engineering team to automate Claims Payments in .NET, significantly reducing
+								manual work and earning high client praise
+							</li>
+							<li>
+								Led winning client-based Hackathon project, earning more business and managing team
+								challenges effectively
+							</li>
+							<li>
+								Served as key interviewer for new candidates at Azenix, contributing to team growth
+								and talent selection
+							</li>
+							<li>Developed Bicep & Terraform templates for efficient infrastructure automation</li>
+						</ul>
 					</div>
 				</div>
 
 				<div class="experience-item">
 					<div class="company">Exify</div>
+					<div class="experience-header">
+						<div class="job-title">Founder & Principal Engineer</div>
+						<div class="dates">Apr 2021 - Jul 2022</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">.NET Core</span>
@@ -511,10 +498,6 @@
 						<span class="tech-tag">SQL Server</span>
 						<span class="tech-tag">Cosmos DB</span>
 						<span class="tech-tag">Azure DevOps</span>
-					</div>
-					<div class="experience-header">
-						<div class="job-title">Founder & Principal Engineer</div>
-						<div class="dates">Apr 2021 - Jul 2022</div>
 					</div>
 					<div class="experience-description">
 						Founded and led technical operations for a software consultancy, delivering event-driven
@@ -547,15 +530,15 @@
 
 				<div class="experience-item">
 					<div class="company">Constructionline</div>
+					<div class="experience-header">
+						<div class="job-title">Senior Software Engineer (Contract)</div>
+						<div class="dates">Jul 2020 - Mar 2021</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">Docker</span>
 						<span class="tech-tag">Kubernetes</span>
-					</div>
-					<div class="experience-header">
-						<div class="job-title">Senior Software Engineer (Contract)</div>
-						<div class="dates">Jul 2020 - Mar 2021</div>
 					</div>
 					<div class="experience-description">
 						Delivered containerized .NET solutions and automated database deployment pipelines for
@@ -576,14 +559,14 @@
 
 				<div class="experience-item">
 					<div class="company">Sport Betting Consultancy</div>
+					<div class="experience-header">
+						<div class="job-title">Full Stack Engineer</div>
+						<div class="dates">Jan 2020 - Jun 2020</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET Core</span>
 						<span class="tech-tag">Kubernetes</span>
 						<span class="tech-tag">On Premise Servers</span>
-					</div>
-					<div class="experience-header">
-						<div class="job-title">Full Stack Engineer</div>
-						<div class="dates">Jan 2020 - Jun 2020</div>
 					</div>
 					<div class="experience-description">
 						Architected and developed full-stack .NET solutions for proprietary sports betting
@@ -605,6 +588,20 @@
 					<div class="company-group-header">
 						<div class="company">Asos</div>
 					</div>
+					<div class="role-list">
+						<div class="role-item">
+							<span class="role-title">Software Engineer</span>
+							<span class="role-dates">Mar 2019 - Dec 2019</span>
+						</div>
+						<div class="role-item">
+							<span class="role-title">Associate Software Engineer</span>
+							<span class="role-dates">Sep 2018 - Feb 2019</span>
+						</div>
+						<div class="role-item">
+							<span class="role-title">Graduate Software Engineer</span>
+							<span class="role-dates">Sep 2017 - Aug 2018</span>
+						</div>
+					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">Azure</span>
 						<span class="tech-tag">.NET Core</span>
@@ -613,69 +610,33 @@
 						<span class="tech-tag">Cosmos DB</span>
 						<span class="tech-tag">Azure DevOps</span>
 					</div>
-
-					<div class="experience-item">
-						<div class="experience-header">
-							<div>
-								<div class="job-title">Software Engineer</div>
-								<div class="company">Asos</div>
-							</div>
-							<div class="dates">Mar 2019 - Dec 2019</div>
-						</div>
-						<div class="experience-description">
-							Contributed to Asos's Kubernetes adoption and containerization strategy, while
-							mentoring junior engineers on cloud-native development practices.
-							<ul>
-								<li>
-									Played a key role in adopting Kubernetes (AKS) at Asos, driving cloud-native
-									transformation
-								</li>
-								<li>
-									Mentored graduates and interns on Azure, .NET Core, and container technologies
-								</li>
-								<li>
-									Containerized legacy Cloud Services with Docker, improving deployment efficiency
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="experience-item">
-						<div class="experience-header">
-							<div>
-								<div class="job-title">Associate Software Engineer</div>
-								<div class="company">Asos</div>
-							</div>
-							<div class="dates">Sep 2018 - Feb 2019</div>
-						</div>
-						<div class="experience-description">
-							Led technical training initiatives and modernized legacy .NET applications through
-							re-platforming to .NET Core.
-							<ul>
-								<li>
-									Delivered comprehensive 9-hour training session on TDD, Test-Driven Development
-									Patterns (TPP), and Test Doubles
-								</li>
-								<li>
-									Re-platformed services from .NET Framework to .NET Core, improving performance and
-									maintainability
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="experience-item">
-						<div class="experience-header">
-							<div>
-								<div class="job-title">Graduate Software Engineer</div>
-								<div class="company">Asos</div>
-							</div>
-							<div class="dates">Sep 2017 - Aug 2018</div>
-						</div>
-						<div class="experience-description">
-							Led the graduate cohort project team, coordinating deliverables and technical
-							execution.
-						</div>
+					<div class="experience-description">
+						Progressed from Graduate to Software Engineer, contributing to Kubernetes adoption,
+						modernizing .NET applications, and mentoring junior engineers.
+						<ul>
+							<li>
+								Played a key role in adopting Kubernetes (AKS) at Asos, driving cloud-native
+								transformation
+							</li>
+							<li>
+								Delivered comprehensive 9-hour training session on TDD, Test-Driven Development
+								Patterns (TPP), and Test Doubles
+							</li>
+							<li>
+								Re-platformed services from .NET Framework to .NET Core, improving performance and
+								maintainability
+							</li>
+							<li>
+								Mentored graduates and interns on Azure, .NET Core, and container technologies
+							</li>
+							<li>
+								Containerized legacy Cloud Services with Docker, improving deployment efficiency
+							</li>
+							<li>
+								Led the graduate cohort project team, coordinating deliverables and technical
+								execution
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
