@@ -3,6 +3,7 @@
 	import FaceTracker from '$lib/components/FaceTracker.svelte';
 	import ContactLinks from '$lib/components/ContactLinks.svelte';
 	import AvailabilityBadge from '$lib/components/AvailabilityBadge.svelte';
+	import ClearanceBadge from '$lib/components/ClearanceBadge.svelte';
 </script>
 
 <div class="container">
@@ -12,7 +13,13 @@
 			<h1>Tom Brereton</h1>
 			<p>Lead Software Engineer | Software Architect | Cloud Engineer</p>
 			<p class="specialties">Specializing in .NET, Azure & Cloud Solutions</p>
-			<AvailabilityBadge href="mailto:mail@tombrereton.dev" message="Available for Contract Work" />
+			<div class="badges-container">
+				<AvailabilityBadge
+					href="mailto:mail@tombrereton.dev"
+					message="Available for Contract Work"
+				/>
+				<ClearanceBadge baseline={true} nv1Willing={true} />
+			</div>
 		</div>
 		<ContactLinks size={28} />
 	</section>
@@ -49,7 +56,11 @@
 		gap: 0.75rem;
 	}
 
-	.hero-text :global(.availability-badge) {
+	.badges-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
 		margin-top: 1.25rem;
 	}
 

@@ -1,0 +1,137 @@
+# Tom Brereton's Portfolio Website - AI Context
+
+## Project Overview
+Personal portfolio website for Tom Brereton, a Lead Software Engineer and Cloud Architect specializing in .NET and Azure solutions.
+
+## Tech Stack
+- **Framework**: SvelteKit
+- **Language**: TypeScript
+- **Styling**: CSS with custom properties (CSS variables)
+- **Fonts**: Geist, Geist Mono, Outfit (from Google Fonts)
+
+## Design System
+
+### Color Scheme
+The site uses a purple theme inspired by Evanescence's aesthetic with automatic dark/light mode support.
+
+**Key Colors:**
+- Purple Dark: `#1a0033`
+- Purple Mid: `#4a0080`
+- Purple Bright: `#7b2cbf`
+- Purple Light: `#9d4edd`
+- Accent Green: `#10b981`
+
+**CSS Variables (defined in `/src/app.css`):**
+- `--color-background`, `--color-background-alt`, `--color-background-card`
+- `--color-text`, `--color-text-secondary`
+- `--color-purple-dark`, `--color-purple-mid`, `--color-purple-bright`, `--color-purple-light`
+- `--gradient-purple`, `--gradient-purple-animated`
+- `--button-glow`, `--button-glow-hover`
+
+### Typography
+- Headings: `Geist Mono` (monospace)
+- Body: `Geist` (sans-serif)
+- Font smoothing enabled for better rendering
+
+### Design Principles
+1. **Modern & Minimalist**: Clean, focused design without over-engineering
+2. **Evanescence & Gothic Theme**: Consistent use of purple gradients and glows
+3. **Responsive**: Mobile-first approach with thoughtful breakpoints
+4. **Dark Mode**: Automatic system preference detection with manual override
+5. **Tasteful Animations**: Subtle transitions and hover effects
+
+## File Structure
+```
+src/
+├── app.css                      # Global styles and CSS custom properties
+├── app.html                     # HTML template
+├── lib/
+│   └── components/
+│       ├── AvailabilityBadge.svelte
+│       ├── ClearanceBadge.svelte
+│       ├── ContactLinks.svelte
+│       ├── FaceTracker.svelte
+│       ├── ProjectCard.svelte
+│       ├── ThemeToggle.svelte
+│       └── Toast.svelte
+└── routes/
+    ├── +layout.svelte
+    └── +page.svelte             # Main homepage with hero section
+```
+
+## Key Components
+
+### Hero Section (`/src/routes/+page.svelte`)
+- FaceTracker with 200px size
+- Name and title
+- Specialties line
+- Badges container with:
+  - AvailabilityBadge (contract work status)
+  - ClearanceBadge (security clearances)
+- ContactLinks
+
+### Badges
+All badges should:
+- Use card background with subtle borders
+- Include purple accent colors
+- Have hover effects with purple glow
+- Be responsive on mobile
+
+## Coding Guidelines
+
+### General
+- Use TypeScript for type safety
+- Keep components simple and focused
+- Avoid over-engineering solutions
+- No unnecessary abstractions
+- Mobile-first responsive design
+
+### Styling
+- ALWAYS use CSS custom properties from `app.css`
+- Use `var(--color-*)` for all colors
+- Use `var(--gradient-purple*)` for gradients
+- Use `var(--button-glow*)` for shadow effects
+- Maintain consistent spacing (0.75rem, 1rem, 1.25rem increments)
+- Border radius: 8px for small elements, 12px for cards
+
+### Responsive Design
+- Desktop-first in hero, then adapt for mobile
+- Key breakpoint: `@media (max-width: 768px)`
+- Use `dvh` for dynamic viewport height on mobile
+- Reduce font sizes and padding on mobile
+
+### Component Patterns
+```svelte
+<script lang="ts">
+  export let propName: type = defaultValue;
+</script>
+
+<div class="component-name">
+  <!-- content -->
+</div>
+
+<style>
+  .component-name {
+    /* styles using CSS custom properties */
+  }
+</style>
+```
+
+## Don't Do This
+- Don't create new color schemes - use existing CSS variables
+- Don't add unnecessary files or documentation unless requested
+- Don't over-engineer simple features
+- Don't use emojis unless explicitly requested
+- Don't add comments for self-evident code
+- Don't create abstractions for one-time use
+
+## Professional Context
+- **Clearances**: Baseline (active), NV1 (willing to obtain)
+- **Availability**: Available for contract work
+- **Specialties**: .NET, Azure, Cloud Solutions
+- **Role**: Lead Software Engineer, Software Architect, Cloud Engineer
+
+## Git
+- Main branch: `main`
+- Current feature branch: `feature/add-more-to-page`
+- Keep commits focused and descriptive
