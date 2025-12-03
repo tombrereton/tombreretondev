@@ -121,6 +121,12 @@
 			/* Experience */
 			.experience-item {
 				margin-bottom: 24px;
+				padding-bottom: 24px;
+				border-bottom: 1px solid #e9ecef;
+			}
+
+			.experience-item:last-child {
+				border-bottom: none;
 			}
 
 			.experience-item > .company {
@@ -131,11 +137,12 @@
 			}
 
 			.experience-header {
+				font-size: 12px;
+				margin-bottom: 8px;
+				color: #495057;
 				display: flex;
 				justify-content: space-between;
 				align-items: baseline;
-				margin-bottom: 8px;
-				gap: 12px;
 			}
 
 			.job-title {
@@ -148,7 +155,13 @@
 				font-size: 12px;
 				color: #6c757d;
 				font-weight: 400;
-				white-space: nowrap;
+				margin-left: auto;
+			}
+
+			.experience-header .separator {
+				color: #adb5bd;
+				font-weight: 400;
+				display: none;
 			}
 
 			.experience-description {
@@ -171,7 +184,7 @@
 			.tech-stack {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 6px;
+				gap: 8px;
 				margin-top: 8px;
 				margin-bottom: 8px;
 			}
@@ -179,8 +192,8 @@
 			.tech-tag {
 				font-size: 10px;
 				padding: 4px 8px;
-				background: #f8f9fa;
-				border: 1px solid #dee2e6;
+				background: #f1f3f5;
+				border: 1px solid #ced4da;
 				border-radius: 3px;
 				color: #495057;
 				font-weight: 500;
@@ -189,6 +202,12 @@
 			/* Multi-role experience (compact grouping) */
 			.company-group {
 				margin-bottom: 24px;
+				padding-bottom: 24px;
+				border-bottom: 1px solid #e9ecef;
+			}
+
+			.company-group:last-child {
+				border-bottom: none;
 			}
 
 			.company-group-header .company {
@@ -206,6 +225,9 @@
 				font-size: 12px;
 				color: #495057;
 				margin-bottom: 3px;
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
 			}
 
 			.role-item .role-title {
@@ -215,6 +237,13 @@
 
 			.role-item .role-dates {
 				color: #6c757d;
+				margin-left: auto;
+			}
+
+			.role-item .role-separator {
+				color: #adb5bd;
+				font-weight: 400;
+				display: none;
 			}
 
 			.company-group .tech-stack {
@@ -352,8 +381,9 @@
 				<div class="experience-item">
 					<div class="company">Department of Employment & Workplace Relations (DEWR)</div>
 					<div class="experience-header">
-						<div class="job-title">Lead Software Engineer (Contract)</div>
-						<div class="dates">Apr 2024 - Present</div>
+						<span class="job-title">Lead Software Engineer (Contract)</span>
+						<span class="separator"> • </span>
+						<span class="dates">Apr 2024 - Present</span>
 					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
@@ -388,8 +418,9 @@
 				<div class="experience-item">
 					<div class="company">Channel Nine</div>
 					<div class="experience-header">
-						<div class="job-title">Senior Software Engineer (Contract)</div>
-						<div class="dates">Sep 2023 - Apr 2024</div>
+						<span class="job-title">Senior Software Engineer (Contract)</span>
+						<span class="separator"> • </span>
+						<span class="dates">Sep 2023 - Apr 2024</span>
 					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
@@ -432,10 +463,12 @@
 					<div class="role-list">
 						<div class="role-item">
 							<span class="role-title">Lead Software Engineer</span>
+							<span class="role-separator"> • </span>
 							<span class="role-dates">Mar 2023 - Sep 2023</span>
 						</div>
 						<div class="role-item">
 							<span class="role-title">Senior Software Engineer</span>
+							<span class="role-separator"> • </span>
 							<span class="role-dates">Jul 2022 - Feb 2023</span>
 						</div>
 					</div>
@@ -489,8 +522,9 @@
 				<div class="experience-item">
 					<div class="company">Exify</div>
 					<div class="experience-header">
-						<div class="job-title">Founder & Principal Engineer</div>
-						<div class="dates">Apr 2021 - Jul 2022</div>
+						<span class="job-title">Founder & Principal Engineer</span>
+						<span class="separator"> • </span>
+						<span class="dates">Apr 2021 - Jul 2022</span>
 					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">Azure</span>
@@ -533,8 +567,9 @@
 				<div class="experience-item">
 					<div class="company">Constructionline</div>
 					<div class="experience-header">
-						<div class="job-title">Senior Software Engineer (Contract)</div>
-						<div class="dates">Jul 2020 - Mar 2021</div>
+						<span class="job-title">Senior Software Engineer (Contract)</span>
+						<span class="separator"> • </span>
+						<span class="dates">Jul 2020 - Mar 2021</span>
 					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET</span>
@@ -562,8 +597,9 @@
 				<div class="experience-item">
 					<div class="company">Sport Betting Consultancy</div>
 					<div class="experience-header">
-						<div class="job-title">Full Stack Engineer</div>
-						<div class="dates">Jan 2020 - Jun 2020</div>
+						<span class="job-title">Full Stack Engineer</span>
+						<span class="separator"> • </span>
+						<span class="dates">Jan 2020 - Jun 2020</span>
 					</div>
 					<div class="tech-stack">
 						<span class="tech-tag">.NET Core</span>
@@ -593,14 +629,17 @@
 					<div class="role-list">
 						<div class="role-item">
 							<span class="role-title">Software Engineer</span>
+							<span class="role-separator"> • </span>
 							<span class="role-dates">Mar 2019 - Dec 2019</span>
 						</div>
 						<div class="role-item">
 							<span class="role-title">Associate Software Engineer</span>
+							<span class="role-separator"> • </span>
 							<span class="role-dates">Sep 2018 - Feb 2019</span>
 						</div>
 						<div class="role-item">
 							<span class="role-title">Graduate Software Engineer</span>
+							<span class="role-separator"> • </span>
 							<span class="role-dates">Sep 2017 - Aug 2018</span>
 						</div>
 					</div>
