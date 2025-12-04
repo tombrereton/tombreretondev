@@ -1,0 +1,3 @@
+- use app.css to centralise styles and color scheme
+- use modern ui designs principles for spacing, typography, components, and interactions
+- use simple and subtle animations to enhance user experience
