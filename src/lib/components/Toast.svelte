@@ -4,9 +4,16 @@
 		show?: boolean;
 		duration?: number;
 		onClose?: () => void;
+		position?: 'bottom' | 'center';
 	}
 
-	let { message, show = $bindable(false), duration = 3000, onClose }: Props = $props();
+	let {
+		message,
+		show = $bindable(false),
+		duration = 3000,
+		onClose,
+		position = 'bottom'
+	}: Props = $props();
 
 	let timeoutId: number | undefined = $state();
 
@@ -35,7 +42,7 @@
 </script>
 
 {#if show}
-	<div class="toast">
+	<div class="toast" class:center={position === 'center'}>
 		<p>{message}</p>
 		<button class="close-button" onclick={handleClose} aria-label="Close notification">
 			<svg
@@ -80,6 +87,14 @@
 		display: flex;
 		align-items: center;
 		gap: 20px;
+	}
+
+	.toast.center {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		bottom: auto;
 	}
 
 	.toast p {
@@ -127,6 +142,23 @@
 		}
 	}
 
+	.toast.center {
+		animation:
+			scale-in 0.3s ease-out,
+			gradient-shift 3s ease infinite;
+	}
+
+	@keyframes scale-in {
+		from {
+			opacity: 0;
+			transform: translate(-50%, -50%) scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
 	@keyframes gradient-shift {
 		0% {
 			background-position: 0% 50%;
@@ -142,6 +174,13 @@
 	@media (max-width: 768px) {
 		.toast {
 			bottom: 80px;
+			min-width: 280px;
+			padding: 16px 56px 16px 24px;
+		}
+
+		.toast.center {
+			min-width: 280px;
+			padding: 16px 56px 16px 24px;
 		}
 
 		.toast p {

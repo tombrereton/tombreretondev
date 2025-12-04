@@ -350,7 +350,12 @@
 	{/if}
 </div>
 
-<Toast bind:show={showToast} message="Tilt your phone and watch me follow! 👀" duration={4000} />
+<Toast
+	bind:show={showToast}
+	message="Tilt your phone and watch me follow! 👀"
+	duration={5000}
+	position="center"
+/>
 
 <style>
 	.face-tracker {
