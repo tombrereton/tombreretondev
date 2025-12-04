@@ -15,7 +15,7 @@
 			<p class="specialties">Specializing in .NET, Azure & Cloud Solutions</p>
 			<div class="badges-container">
 				<AvailabilityBadge
-					href="mailto:mail@tombrereton.dev"
+					href="mailto:mail@tombrereton.dev?subject=Contract%20Opportunity&body=Hi%20Tom%2C%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20contract%20opportunity.%0D%0A%0D%0A"
 					message="Available for Contract Work"
 				/>
 				<ClearanceBadge baseline={true} nv1Willing={true} />

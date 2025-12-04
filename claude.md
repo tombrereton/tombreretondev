@@ -1,3 +1,5 @@
+- I am a software engineer and the goal of the website is to help me get jobs, win contracts, and showcase my skills
 - use app.css to centralise styles and color scheme
 - use modern ui designs principles for spacing, typography, components, and interactions
 - use simple and subtle animations to enhance user experience
+- use components when adding features or elements to the website

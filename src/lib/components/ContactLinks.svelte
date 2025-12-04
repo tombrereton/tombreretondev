@@ -43,7 +43,10 @@
 			/>
 		</svg>
 	</a>
-	<a href="mailto:mail@tombrereton.dev" aria-label="Email">
+	<a
+		href="mailto:mail@tombrereton.dev?subject=Getting%20in%20Touch&body=Hi%20Tom%2C%0D%0A%0D%0A"
+		aria-label="Email"
+	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width={size}
