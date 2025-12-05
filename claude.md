@@ -3,3 +3,4 @@
 - use modern ui designs principles for spacing, typography, components, and interactions
 - use simple and subtle animations to enhance user experience
 - use components when adding features or elements to the website
+- do not lint code

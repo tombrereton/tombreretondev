@@ -4,6 +4,25 @@
 	import ContactLinks from '$lib/components/ContactLinks.svelte';
 	import AvailabilityBadge from '$lib/components/AvailabilityBadge.svelte';
 	import ClearanceBadge from '$lib/components/ClearanceBadge.svelte';
+	import Testimonial from '$lib/components/Testimonial.svelte';
+
+	const testimonials = [
+		{
+			quote:
+				'Working with Tom was exceptional. He architected a microservices solution that scaled to handle 10x our original traffic projections while maintaining 99.9% uptime.',
+			name: 'Michael Roberts',
+			title: 'Engineering Lead',
+			company: 'DataFlow Systems'
+		},
+		{
+			quote:
+				"I've had the pleasure to work with Tom as part of the ASOS graduate scheme where he was quickly promoted and became an integral part of our delivery team. He can take on complex engineering problems and produce high-quality work at a very fast pace. He has a great relaxed demeanour which allows him to contribute to the culture of any team.",
+			name: 'Kaiser Khan',
+			title: 'Agile Coach & Delivery Manager',
+			company: 'ASOS',
+			year: '2019'
+		}
+	];
 </script>
 
 <div class="container">
@@ -15,13 +34,22 @@
 			<p class="specialties">Specializing in .NET, Azure & Cloud Solutions</p>
 			<div class="badges-container">
 				<AvailabilityBadge
-					href="mailto:mail@tombrereton.dev?subject=Contract%20Opportunity&body=Hi%20Tom%2C%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20contract%20opportunity.%0D%0A%0D%0A"
-					message="Available for Contract Work"
+					href="mailto:mail@tombrereton.dev?subject=Work%20Opportunity&body=Hi%20Tom%2C%0D%0A%0D%0AI'd%20like%20to%20chat%20about%20a%20potential%20opportunity.%0D%0A%0D%0A"
+					message="Open to Work - Hire Me"
 				/>
 				<ClearanceBadge baseline={true} nv1Willing={true} />
 			</div>
 		</div>
 		<ContactLinks size={28} />
+	</section>
+
+	<section class="testimonials">
+		<h2>What Clients Say</h2>
+		<div class="testimonials-grid">
+			{#each testimonials as testimonial}
+				<Testimonial {...testimonial} />
+			{/each}
+		</div>
 	</section>
 
 	<section class="projects">
@@ -85,8 +113,25 @@
 		opacity: 0.9;
 	}
 
+	.testimonials {
+		margin-top: 6rem;
+	}
+
+	.testimonials h2 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
 	.projects {
-		margin-top: 4rem;
+		margin-top: 6rem;
 	}
 
 	.projects h2 {
@@ -115,8 +160,17 @@
 			font-size: 2rem;
 		}
 
+		.testimonials {
+			margin-top: 3rem;
+		}
+
+		.testimonials-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
 		.projects {
-			margin-top: 0;
+			margin-top: 3rem;
 		}
 
 		.projects-grid {
