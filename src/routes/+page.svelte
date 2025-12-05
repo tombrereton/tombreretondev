@@ -6,6 +6,8 @@
 	import ClearanceBadge from '$lib/components/ClearanceBadge.svelte';
 	import Testimonial from '$lib/components/Testimonial.svelte';
 
+	import asosLogo from '$lib/assets/asos_com_logo.jpeg';
+
 	const testimonials = [
 		{
 			quote:
@@ -20,7 +22,8 @@
 			name: 'Kaiser Khan',
 			title: 'Agile Coach & Delivery Manager',
 			company: 'ASOS',
-			year: '2019'
+			year: '2019',
+			companyLogo: asosLogo
 		}
 	];
 </script>
