@@ -11,13 +11,6 @@
 	const testimonials = [
 		{
 			quote:
-				'Working with Tom was exceptional. He architected a microservices solution that scaled to handle 10x our original traffic projections while maintaining 99.9% uptime.',
-			name: 'Michael Roberts',
-			title: 'Engineering Lead',
-			company: 'DataFlow Systems'
-		},
-		{
-			quote:
 				"I've had the pleasure to work with Tom as part of the ASOS graduate scheme where he was quickly promoted and became an integral part of our delivery team. He can take on complex engineering problems and produce high-quality work at a very fast pace. He has a great relaxed demeanour which allows him to contribute to the culture of any team.",
 			name: 'Kaiser Khan',
 			title: 'Agile Coach & Delivery Manager',
