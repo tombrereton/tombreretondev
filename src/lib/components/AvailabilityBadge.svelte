@@ -26,13 +26,13 @@
 	.availability-badge {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.5rem;
-		padding: 0.75rem 1.5rem;
+		gap: 0.625rem;
+		padding: 1rem 2rem;
 		border-radius: 50px;
-		font-size: 0.9375rem;
-		font-weight: 600;
+		font-size: 1.125rem;
+		font-weight: 700;
 		font-family: 'Outfit', sans-serif;
-		border: 1px solid rgba(199, 125, 255, 0.3);
+		border: 2px solid rgba(199, 125, 255, 0.4);
 		background: var(--color-background-card);
 		transition: all 0.3s ease;
 		position: relative;
@@ -45,11 +45,11 @@
 	.availability-badge::before {
 		content: '';
 		position: absolute;
-		inset: -1px;
+		inset: -2px;
 		background: var(--gradient-purple-animated);
 		background-size: 300% 300%;
 		border-radius: 50px;
-		opacity: 0.6;
+		opacity: 0.8;
 		z-index: -1;
 		animation: gradient-shift 3s ease infinite;
 	}
@@ -85,10 +85,11 @@
 	}
 
 	.status-dot {
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 		border-radius: 50%;
 		background: #10b981;
+		box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
 		animation: pulse 2s ease-in-out infinite;
 		transition: all 0.3s ease;
 	}

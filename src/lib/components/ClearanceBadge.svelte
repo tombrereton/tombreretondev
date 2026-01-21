@@ -38,36 +38,37 @@
 	.clearance-badge {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.75rem;
-		padding: 0.875rem 1.25rem;
-		background: var(--color-background-card);
+		gap: 0.625rem;
+		padding: 0.625rem 1rem;
+		background: transparent;
 		border: 1px solid var(--color-border);
-		border-radius: 12px;
-		font-size: 0.9rem;
+		border-radius: 8px;
+		font-size: 0.8125rem;
 		transition: all 0.3s ease;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+		box-shadow: none;
+		opacity: 0.85;
 	}
 
 	.clearance-badge:hover {
-		box-shadow: 0 4px 12px rgba(123, 44, 191, 0.1);
-		border-color: var(--color-purple-light);
+		opacity: 1;
+		background: rgba(123, 44, 191, 0.03);
 	}
 
 	.badge-icon {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 32px;
-		height: 32px;
-		background: var(--gradient-purple);
-		border-radius: 8px;
-		color: white;
+		width: 24px;
+		height: 24px;
+		background: rgba(123, 44, 191, 0.1);
+		border-radius: 6px;
+		color: var(--color-purple);
 		flex-shrink: 0;
 	}
 
 	.badge-icon svg {
-		width: 16px;
-		height: 16px;
+		width: 14px;
+		height: 14px;
 	}
 
 	.badge-content {
@@ -91,7 +92,7 @@
 
 	.clearance-item.willing {
 		color: var(--color-text-secondary);
-		font-size: 0.85rem;
+		font-size: 0.75rem;
 		font-weight: 400;
 	}
 
