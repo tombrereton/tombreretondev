@@ -7,8 +7,30 @@
 	import Testimonial from '$lib/components/Testimonial.svelte';
 
 	import asosLogo from '$lib/assets/asos_com_logo.jpeg';
+	import mantelLogo from '$lib/assets/mantel_group_logo.jpeg';
+	import dewrLogo from '$lib/assets/dewr_logo.jpeg';
 
 	const testimonials = [
+		{
+			quote:
+				'Tom brings a rare mix of thoughtfulness, technical depth, and calm, consistent delivery. When we needed someone to lead one of the delivery teams, he stepped into the role effortlessly—solving complex problems with a level head and keeping delivery moving without compromising quality. He elevates the people around him and consistently delivers.',
+			name: 'Phillipe Daumont',
+			title: 'Cloud Architect & Technical Lead',
+			company: 'DEWR',
+			year: '2025',
+			companyLogo: dewrLogo,
+			url: 'https://www.linkedin.com/in/tbrereton/details/recommendations'
+		},
+		{
+			quote:
+				"Tom is a motivated and dedicated engineer. He works extremely effectively in both software engineering and cloud engineering spaces. He's driven engineer with excellent work ethic. Any organisation would be lucky to have him as part of their team.",
+			name: 'Brendan Thompson',
+			title: 'Principal Solution Architect',
+			company: 'Mantel Group',
+			year: '2023',
+			companyLogo: mantelLogo,
+			url: 'https://www.linkedin.com/in/tbrereton/details/recommendations'
+		},
 		{
 			quote:
 				"I've had the pleasure to work with Tom as part of the ASOS graduate scheme where he was quickly promoted and became an integral part of our delivery team. He can take on complex engineering problems and produce high-quality work at a very fast pace. He has a great relaxed demeanour which allows him to contribute to the culture of any team.",
@@ -16,7 +38,8 @@
 			title: 'Agile Coach & Delivery Manager',
 			company: 'ASOS',
 			year: '2019',
-			companyLogo: asosLogo
+			companyLogo: asosLogo,
+			url: 'https://www.linkedin.com/in/tbrereton/details/recommendations'
 		}
 	];
 </script>
