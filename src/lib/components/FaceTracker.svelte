@@ -365,6 +365,8 @@
 		background: #f0f0f0;
 		border: 4px solid #212529;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		flex-shrink: 0;
+		aspect-ratio: 1 / 1;
 	}
 
 	.face-image {
